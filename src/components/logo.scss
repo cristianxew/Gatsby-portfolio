@@ -1,0 +1,93 @@
+#logo-sm path:nth-child(1) {
+  stroke-dasharray: 469.5989990234375;
+  stroke-dashoffset: 469.5989990234375;
+  animation: line-anim 5s ease forwards;
+}
+
+#logo-cris path:nth-child(1) {
+  stroke-dasharray: 469.5989990234375;
+  stroke-dashoffset: 469.5989990234375;
+  animation: line-anim 4s ease forwards;
+}
+#logo-cris path:nth-child(3) {
+  stroke-dasharray: 121.42312622070312;
+  stroke-dashoffset: 121.42312622070312;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+#logo-cris path:nth-child(4) {
+  stroke-dasharray: 67.70761108398438;
+  stroke-dashoffset: 67.70761108398438;
+  animation: line-anim 2s ease forwards 0.5s;
+}
+#logo-cris path:nth-child(5) {
+  stroke-dasharray: 69.99999237060547;
+  stroke-dashoffset: 69.99999237060547;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+#logo-cris path:nth-child(6) {
+  stroke-dasharray: 101.91413116455078;
+  stroke-dashoffset: 101.91413116455078;
+  animation: line-anim 2s ease forwards 0.8s;
+}
+#logo-cris path:nth-child(7) {
+  stroke-dasharray: 85.60929870605469;
+  stroke-dashoffset: 85.60929870605469;
+  animation: line-anim 2s ease forwards 1s;
+}
+#logo-cris path:nth-child(8) {
+  stroke-dasharray: 70.00000762939453;
+  stroke-dashoffset: 70.00000762939453;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#logo-cris path:nth-child(9) {
+  stroke-dasharray: 114.32733917236328;
+  stroke-dashoffset: 114.32733917236328;
+  animation: line-anim 2s ease forwards 1.4s;
+}
+#logo-cris path:nth-child(10) {
+  stroke-dasharray: 106.30915069580078;
+  stroke-dashoffset: 106.30915069580078;
+  animation: line-anim 2s ease forwards 1.6s;
+}
+#logo-cris path:nth-child(12) {
+  stroke-dasharray: 172.6798095703125;
+  stroke-dashoffset: 172.6798095703125;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+
+#logo-cris path:nth-child(13) {
+  stroke-dasharray: 112.7461929321289;
+  stroke-dashoffset: 112.7461929321289;
+  animation: line-anim 2s ease forwards 2s;
+}
+#logo-cris path:nth-child(14) {
+  stroke-dasharray: 67.70773315429688;
+  stroke-dashoffset: 67.70773315429688;
+  animation: line-anim 2s ease forwards 2.2s;
+}
+#logo-cris path:nth-child(15) {
+  stroke-dasharray: 106.30928802490234;
+  stroke-dashoffset: 106.30928802490234;
+  animation: line-anim 2s ease forwards 2.4s;
+}
+#logo-cris path:nth-child(16) {
+  stroke-dasharray: 114.3276138305664;
+  stroke-dashoffset: 114.3276138305664;
+  animation: line-anim 2s ease forwards 2.6s;
+}
+#logo-cris path:nth-child(17) {
+  stroke-dasharray: 66.4000015258789;
+  stroke-dashoffset: 66.4000015258789;
+  animation: line-anim 2s ease forwards 2.8s;
+}
+#logo-cris path:nth-child(18) {
+  stroke-dasharray: 93;
+  stroke-dashoffset: 93;
+  animation: line-anim 2s ease forwards 0.5s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

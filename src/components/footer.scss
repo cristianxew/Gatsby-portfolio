@@ -1,0 +1,13 @@
+.footer {
+  height: 8rem;
+  background: #003247;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  box-shadow: 3px 0px 10px RGBA(0, 0, 30, 0.1);
+}
+.footer h5 {
+  font-weight: normal;
+  text-transform: capitalize;
+  padding: 0.5rem;
+}

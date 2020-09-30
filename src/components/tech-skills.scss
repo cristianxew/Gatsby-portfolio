@@ -1,0 +1,48 @@
+.section-skills {
+  padding: 4rem 0 0;
+}
+
+.skill-box {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2rem 0;
+  margin-bottom: 4rem;
+  .skillbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .icon-tech {
+      .icon {
+        font-size: 3.5rem;
+        color: #a1e4df;
+      }
+    }
+    .skillbar-title {
+      font-weight: 300;
+      font-size: 16px;
+      text-transform: capitalize;
+      margin-top: 6px;
+    }
+    &:hover .icon-tech .icon {
+      transform: rotateY(360deg);
+      transition: 0.9s ease;
+    }
+  }
+  /* @media (max-width: 991px) {
+    .skillbar-item:not(:last-child) {
+      margin-bottom: 76px;
+    }
+  } */
+
+  /* .fill-skillbar {
+    height: 8px;
+    width: 0;
+    border-radius: 5px;
+    float: left;
+    background: linear-gradient(to left, #a1e4df, #00b069);
+    opacity: 0;
+    transition: all 3s ease 0.3s;
+  } */
+}

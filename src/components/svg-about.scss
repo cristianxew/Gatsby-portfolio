@@ -1,0 +1,90 @@
+#about-svg {
+  max-width: 100%;
+  display: flex;
+  margin: 4rem auto;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-60px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes rotate-squares {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+#squares-bg {
+  animation: rotate-squares 3s linear infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+  #Vector_15,
+  #Vector_16,
+  #Vector_17 {
+    animation: rotate 3s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+}
+
+#squares-border {
+  animation: rotate-squares 3s linear infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+  #Vector_18,
+  #Vector_19,
+  #Vector_20 {
+    animation: rotate 3s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+}
+
+#Vector_25 {
+  animation: floating 12s linear infinite;
+}
+
+#Vector_26 {
+  animation: move-lines 3s infinite;
+}
+#Vector_27 {
+  animation: move-lines 3s infinite;
+  animation-delay: 300ms;
+}
+#Vector_28 {
+  animation: move-lines 3s infinite;
+  animation-delay: 600ms;
+}
+#Vector_29 {
+  animation: move-lines 3s infinite;
+  animation-delay: 900ms;
+}
+#Vector_30 {
+  animation: move-lines 3s infinite;
+  animation-delay: 1200ms;
+}
+@keyframes move-lines {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

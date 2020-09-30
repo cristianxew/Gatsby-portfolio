@@ -1,0 +1,154 @@
+.hero {
+  box-shadow: inset 0 0 0 2000px RGBA(0, 41, 59, 0.5);
+  position: relative;
+  .hero-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      z-index: 0;
+      animation: imageAnimation 24s linear infinite;
+      &:nth-child(1) {
+        background-image: url("/img/cristian.jpg");
+        background-position-x: left;
+        background-position-y: 25%;
+        @media (max-width: 767px) {
+          background-image: url("/img/cristian-sm.jpg");
+          background-position: center;
+        }
+      }
+      &:nth-child(2) {
+        background-image: url("/img/background-reloj.jfif");
+        animation-delay: 8s;
+      }
+      &:nth-child(3) {
+        background-image: url("/img/background-computer.jpg");
+        animation-delay: 16s;
+        @media (max-width: 767px) {
+          background-image: url("/img/background-xs.jpg");
+        }
+      }
+    }
+  }
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+    right: 0;
+    p {
+      max-width: 500px;
+    }
+  }
+}
+.no-cssanimations .hero-slider li {
+  opacity: 1;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 0.5;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+.hero .scroll-down span {
+  text-align: center;
+  position: absolute;
+  bottom: 2rem;
+  z-index: 1;
+  left: calc(50% - 8px);
+  width: 30px;
+  height: 50px;
+  border-radius: 50px;
+  border: 3px solid #fafafa;
+}
+
+.hero .scroll-down span:before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 10px;
+  left: calc(50% - 3px);
+  margin-top: 10px;
+  border-radius: 5px;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.typed-cursor {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.typed-text {
+  display: inline-flex;
+  margin: 0.5rem 0 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 200px;
+  padding-left: 0;
+  margin: 1rem auto 0;
+
+  li {
+    margin: 5px 0;
+    .social-link {
+      font-size: 1.5rem;
+      color: #fafafa;
+      transition: 0.4s ease;
+      cursor: pointer;
+      &:hover {
+        color: #00b069;
+      }
+    }
+  }
+}
