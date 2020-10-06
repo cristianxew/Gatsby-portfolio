@@ -1,29 +1,88 @@
-.blog-template-top-img {
-  height: 25rem;
-  margin-top: -4rem;
-  filter: brightness(0.4);
-  object-fit: cover;
-  @media (max-width: 767px) {
-    height: 16rem !important;
-  }
+.blog-template {
+  padding: 5rem 0;
 }
-.blog-template-profile-img {
-  max-width: 150px;
-  border-radius: 50%;
-  transform: translate(0%, -50%);
-  margin: auto;
-  border: 1rem solid #002e42;
-  filter: brightness(0.9);
-  @media (max-width: 767px) {
-    max-width: 100px;
-    border: 0.7rem solid #002e42;
-  }
-}
-.blog-content {
+.blog-content-container {
   padding: 0rem 7rem 2rem;
+  position: relative;
+}
+.blog-header-photo {
+  position: absolute;
+  top: 3.7rem;
+  max-width: 60px;
+  border-radius: 50%;
+  filter: brightness(0.9);
+}
+.blog-header-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0rem;
+  .blog-header-top-left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    color: #6c7d85;
+    h5 {
+      text-transform: capitalize;
+    }
+
+    @media (max-width: 380px) {
+      margin-left: 4.5rem;
+    }
+  }
+  .blog-header-top-rigth {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.blog-title {
+  color: #00b069;
+  text-transform: capitalize;
+  margin: 2.5rem 0;
+  @media (max-width: 575px) {
+    font-size: 1.8rem !important;
+    margin: 2rem 0;
+  }
+}
+
+.blog-template-top-img {
+  width: 100%;
+  height: 26rem;
+  margin-bottom: 3rem;
+  filter: brightness(0.9);
+  object-fit: cover;
+  @media (max-width: 380px) {
+    height: 13rem !important;
+  }
+}
+.social-links-blog {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 150px;
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    margin: 5px 0;
+    .social-link {
+      font-size: 1.2rem;
+      color: #6c7d85;
+      transition: 0.4s ease;
+      cursor: pointer;
+      &:hover {
+        color: #00b069;
+      }
+      @media (max-width: 380px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.blog-content {
   letter-spacing: 0.2px;
   color: #fafafa;
-  margin-top: -2.5rem;
+  margin-top: 1rem;
   font-size: 19px;
   @media (max-width: 767px) {
     font-size: 17px;

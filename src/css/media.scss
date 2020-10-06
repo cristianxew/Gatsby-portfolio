@@ -11,7 +11,7 @@
     margin-bottom: 1rem !important;
     max-width: 230px;
   }
-  .blog-content {
+  .blog-content-container {
     padding: 0rem 3rem 2rem !important;
   }
   .nav-bar .menu-wrap .main-menu div .uls-container ul li {
@@ -58,9 +58,9 @@
     margin: 3rem 0 0rem !important;
   }
   .blog-template-top-img {
-    height: 20rem !important;
+    height: 19rem !important;
   }
-  .blog-content {
+  .blog-content-container {
     padding: 0rem 1rem 1rem !important;
     h1 {
       font-size: 2rem !important;
@@ -110,11 +110,17 @@
       font-size: 2.8rem !important;
     }
   }
+  .blog-template {
+    padding: 2rem 0 !important;
+  }
   .services-content {
     font-size: 1rem !important;
   }
-  .blog-content {
-    padding: 0rem 0 1rem !important;
+  .blog-content-container {
+    padding: 0rem 1rem 1rem !important;
+  }
+  .blog-template-top-img {
+    height: 16rem !important;
   }
   .menu-wrap .main-menu > div > .uls-container .social-box-menu li a {
     font-size: 1.4rem !important;
