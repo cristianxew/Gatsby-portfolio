@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Cristian Bernal Portfolio",
+    title: "CristianBernal",
     description:
       "Full-stack web developer based in Warsaw. I'm very passionate about programming and developing beautiful and efficient web applications",
     author: "CristianBernal",
@@ -48,6 +48,12 @@ module.exports = {
             variants: [`300`, `400`, `500`],
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `https-cristianbernal-com`,
       },
     },
   ],

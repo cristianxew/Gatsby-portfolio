@@ -79,7 +79,7 @@ const About = ({
                       <ul className="list-unstyled">
                         <li>
                           <p>
-                            Age : <span> 25</span>
+                            Age : <span>{new Date().getFullYear() - 1995}</span>
                           </p>
                         </li>
                         <li>

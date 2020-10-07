@@ -24,15 +24,16 @@
 }
 
 .foto-container {
-  width: 270px;
+  width: 220px;
   margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  //position: relative;
   .photo-about {
     text-align: center;
     img {
-      border-radius: 50%;
+      border-radius: 10px;
       height: 100%;
       object-fit: cover;
-      border: 2px solid #008b53;
     }
   }
 }
@@ -89,8 +90,8 @@
   border-radius: 50%;
   opacity: 0.7;
   position: absolute;
-  top: 7%;
-  right: 10%;
+  top: 45%;
+  right: 40%;
   z-index: 1;
   animation: floating 12s linear infinite;
 }
@@ -100,7 +101,7 @@
     transform: translate(0px);
   }
   50% {
-    transform: translate(-100px);
+    transform: translate(-80px);
   }
   100% {
     transform: translate(0px);
@@ -110,7 +111,7 @@
 .square {
   position: absolute;
   width: 300px;
-  bottom: 25px;
+  top: 50%;
   z-index: -1;
   right: 10%;
   animation: rotate 25s linear infinite;

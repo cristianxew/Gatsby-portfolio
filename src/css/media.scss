@@ -9,7 +9,7 @@
 @media (max-width: 991px) {
   .foto-container {
     margin-bottom: 1rem !important;
-    max-width: 230px;
+    max-width: 180px;
   }
   .blog-content-container {
     padding: 0rem 3rem 2rem !important;
@@ -136,7 +136,7 @@
   }
 
   .foto-container {
-    max-width: 200px;
+    max-width: 150px;
   }
   .hero-desc {
     padding: 1rem;
@@ -144,6 +144,9 @@
   .personal-info-1,
   .personal-info-2 {
     text-align: center;
+  }
+  .floating {
+    top: 55% !important;
   }
   .square {
     width: 200px !important;
@@ -153,8 +156,8 @@
     left: 120px !important;
   }
   .circle {
-    width: 60px !important;
-    height: 60px !important;
+    width: 50px !important;
+    height: 50px !important;
   }
   #about-svg {
     margin: 1rem 0 !important;
@@ -167,9 +170,6 @@
   }
   .square {
     width: 150px;
-  }
-  .foto-container {
-    max-width: 180px;
   }
   .display-content {
     padding: 5rem 0 0;
@@ -194,19 +194,19 @@
     max-width: 200px;
   }
   .pill-button {
-    padding: 8px 24px;
+    padding: 8px 24px !important;
   }
   .circle {
-    height: 60px;
-    width: 60px;
+    height: 40px !important;
+    width: 40px !important;
   }
   .circle-2 {
-    height: 45px;
-    width: 45px;
+    height: 30px !important;
+    width: 30px !important;
   }
   .floating {
-    height: 40px;
-    width: 40px;
+    height: 25px !important;
+    width: 25px !important;
   }
   #about-svg {
     margin: 0 !important;
