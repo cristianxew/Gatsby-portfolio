@@ -105,7 +105,7 @@ const About = ({
                   <div className="button-border mt-3 mb-lg-0 mr-4">
                     <a
                       target="_blank"
-                      href="https://drive.google.com/file/d/1U_t7eWqR295_eyffxwljLHsDhWBlTnT-/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1TA0iVtWcAkw8drcM5PvvIiOn2SA0EzQz/view?usp=sharing"
                       rel="noopener noreferrer"
                     >
                       <Bottom>Download Cv</Bottom>
