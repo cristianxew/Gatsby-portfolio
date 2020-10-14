@@ -20,6 +20,51 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allStrapiBlogs } }) => {
+              return allStrapiBlogs.nodes.map(node => {
+                return Object.assign({}, node.nodes, {
+                  description: node.desc,
+                  date: node.date,
+                  title: node.title,
+                  url: site.siteMetadata.siteUrl + node.slug,
+                })
+              })
+            },
+            query: `
+              {
+                allStrapiBlogs {
+                  nodes {
+                    slug
+                    desc
+                    date(formatString: "DD/MM/YYYY")
+                    title
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Your Site's RSS Feed",
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
