@@ -42,7 +42,7 @@ module.exports = {
                   description: node.desc,
                   date: node.date,
                   title: node.title,
-                  url: site.siteMetadata.siteUrl + node.slug,
+                  url: site.siteMetadata.siteUrl + "/blogs/" + node.slug,
                 })
               })
             },
