@@ -1,0 +1,20 @@
+.footer {
+  height: 8rem;
+  background: #003247;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  box-shadow: 3px 0px 10px RGBA(0, 0, 30, 0.1);
+}
+
+.footer p {
+  //font-weight: normal;
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 0.5rem;
+  font-weight: 400;
+
+  @media screen and (max-width: 380px) {
+    font-size: 16px;
+  }
+}

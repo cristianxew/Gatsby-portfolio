@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import Hero from "../components/Hero"
-import Services from "../components/Services"
-import TechSkills from "../components/TechSkills"
-import Projects from "../components/Projects"
-import Blogs from "../components/Blogs"
+import Hero from "../components/Hero/Hero"
+import Services from "../components/Service/Services"
+import TechSkills from "../components/TechSkills/TechSkills"
+import Projects from "../components/Project/Projects"
+import LatestArticles from "../components/Blog/LatestArticles"
 import SEO from "../components/SEO"
 export default ({ data }) => {
   const {
@@ -17,9 +17,9 @@ export default ({ data }) => {
       <SEO title="Home" />
       <Hero />
       <Services />
+      <Projects projects={projects} title="Recent projects" showLink />
+      <LatestArticles blogs={blogs} title="Latest Articles" />
       <TechSkills />
-      <Projects projects={projects} title="Featured projects" showLink />
-      <Blogs blogs={blogs} title="Latest Articles" showLink />
     </Layout>
   )
 }
@@ -53,10 +53,10 @@ export const query = graphql`
       nodes {
         slug
         desc
-        date(formatString: "DD/MM/YYYY")
+        date(formatString: "MMMM Do, YYYY")
         id
         title
-        category
+        tag
         image {
           childImageSharp {
             fluid {

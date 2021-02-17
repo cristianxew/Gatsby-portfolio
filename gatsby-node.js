@@ -1,4 +1,4 @@
-const path = require("path")
+//const path = require("path")
 
 // // create pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
@@ -10,15 +10,44 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      categories: allStrapiCategories {
+        nodes {
+          strapiId
+          slug
+        }
+      }
     }
   `)
 
-  result.data.blogs.nodes.forEach(blog => {
+  if (result.errors) {
+    throw result.errors
+  }
+
+  const blogs = result.data.blogs.nodes
+  const categories = result.data.categories.nodes
+  console.log(categories)
+
+  const blogTemplate = require.resolve("./src/templates/blog-template.js")
+
+  blogs.forEach(blog => {
     createPage({
       path: `/blogs/${blog.slug}`,
-      component: path.resolve(`src/templates/blog-template.js`),
+      component: blogTemplate,
       context: {
         slug: blog.slug,
+      },
+    })
+  })
+  const categoryTemplate = require.resolve(
+    "./src/templates/category-template.js"
+  )
+
+  categories.forEach(category => {
+    createPage({
+      path: `/category/${category.slug}`,
+      component: categoryTemplate,
+      context: {
+        slug: category.slug,
       },
     })
   })

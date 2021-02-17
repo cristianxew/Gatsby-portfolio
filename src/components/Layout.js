@@ -1,7 +1,8 @@
 import React from "react"
-import Navbar from "./Navbar"
+import Navbar from "./Navbar/Navbar"
 import useSticky from "./hook/useSticky"
-import Footer from "./Footer"
+import Footer from "./Footer/Footer"
+
 const Layout = ({ children }) => {
   const { isSticky, element } = useSticky()
   return (

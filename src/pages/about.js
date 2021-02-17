@@ -1,108 +1,49 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
-import Title from "../components/Title"
-import SvgAbout from "../components/SvgAbout"
-import Bottom from "../components/Bottom"
-import SEO from "../components/SEO"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
+import Layout from "../components/Layout"
+import Title from "../components/Title/Title"
+//import SvgAbout from "../components/About/SvgAbout"
+import Bottom from "../components/Bottom/Bottom"
+import SEO from "../components/SEO"
 import "./about.scss"
+import CodersrankSummary from "@codersrank/summary"
+import CodersRankActivity from "@codersrank/activity"
+//window.customElements.define("codersrank-summary", CodersrankSummary)
+window.customElements.define("codersrank-activity", CodersRankActivity)
 
 const About = ({
   data: {
     allStrapiAbout: { nodes },
-    file: {
-      childImageSharp: { fluid },
-    },
   },
 }) => {
   const { title, info, image } = nodes[0]
+
+  useEffect(() => {
+    //window.customElements.define("codersrank-activity", CodersRankActivity)
+  }, [])
+
   return (
     <Layout>
       <SEO
         title="about"
-        description="my name is Cristian, I am a simple, dreamy, and technology loving-person. I specialize in building modern web applications with high-quality features. I'm very passionate about programming and I am constantly practicing and improving my skills. Apart from coding my favorite things to do are playing guitar, traveling, and kayaking."
+        description="I specialize in building modern web applications with high-quality features. I'm very passionate about programming and I am constantly practicing and improving my skills. Apart from coding my favorite things to do are playing guitar, traveling, and kayaking."
       />
       <main className="about-page">
         <section className="about-section">
           <div className="container">
             <div className="row">
-              <div className="col-lg-12">
-                <Title title={title} />{" "}
-              </div>
-              <div className="col-lg-10 about-info font-2-color">{info}</div>
-              <div className="col-lg-12">
-                <SvgAbout />
-              </div>
-              <div className="foto-container">
-                <div className="square">
-                  <Image fluid={fluid} />
-                </div>
-                <div className="circle"></div>
-                <div className="circle-2"></div>
-                <div className="circle-3"></div>
-                <div className="floating"></div>
+              <div className="col-lg-5">
                 <div className="photo-about">
                   <Image fluid={image.childImageSharp.fluid} />
                 </div>
               </div>
-              <div className="col-lg-7  col-md-12">
-                <div className="personal-item ">
-                  <h3 className="base-color my-3">Personal Info</h3>
-                  <div className="row">
-                    <div className="col-lg-6 personal-info">
-                      <ul className="list-unstyled">
-                        <li>
-                          <p>
-                            First Name : <span> Cristian Leonardo</span>
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Last Name : <span> Bernal Arciniegas</span>
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Phone : <span> +48 605 095 818</span>
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            City : <span> Warsaw, Poland</span>
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-lg-6  personal-info">
-                      <ul className="list-unstyled">
-                        <li>
-                          <p>
-                            Age : <span>{new Date().getFullYear() - 1995}</span>
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Nationality : <span> Colombian</span>
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Mail : <span> cristianxsa15@gmail.com</span>
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Freelance : <span> Available</span>
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+              <div className="col-lg-7">
+                <Title title={title} />{" "}
+                <div className="col-lg-12 about-info">{info}</div>
                 <div className="personal-info-bottoms">
-                  <div className="button-border mt-3 mb-lg-0 mr-4">
+                  <div className="mt-3 mb-lg-0 mr-4">
                     <a
                       target="_blank"
                       href="https://drive.google.com/file/d/1TA0iVtWcAkw8drcM5PvvIiOn2SA0EzQz/view?usp=sharing"
@@ -111,12 +52,29 @@ const About = ({
                       <Bottom>Download Cv</Bottom>
                     </a>
                   </div>
-                  <div className="button-border mt-3 mb-lg-0 to-contact">
+                  <div className="mt-3 mb-lg-0 to-contact">
                     <Link to="/contact/">
                       <Bottom>Hire Me</Bottom>
                     </Link>
                   </div>
                 </div>
+              </div>
+              <div className="col-md-12 mt-5 codersrank-wrapper">
+                <h2>Codersrank</h2>
+                <codersrank-summary
+                  show-avatar="false"
+                  username="cristianxew"
+                  branding="false"
+                  show-header="false"
+                ></codersrank-summary>
+              </div>
+              <div className="col-md-12 mt-5 codersrank-wrapper">
+                <codersrank-activity
+                  username="cristianxew"
+                  labels
+                  tooltip
+                  weeks="46"
+                ></codersrank-activity>
               </div>
             </div>
           </div>
@@ -138,13 +96,6 @@ export const query = graphql`
               ...GatsbyImageSharpFluid
             }
           }
-        }
-      }
-    }
-    file(relativePath: { eq: "element_square.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
         }
       }
     }

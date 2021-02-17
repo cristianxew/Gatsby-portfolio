@@ -1,7 +1,8 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import Projects from "../components/Projects"
+import Title from "../components/Title/Title"
+import Layout from "../components/Layout"
+import Projects from "../components/Project/Projects"
 import SEO from "../components/SEO"
 
 const ProjectsPage = ({
@@ -11,12 +12,10 @@ const ProjectsPage = ({
 }) => {
   return (
     <Layout>
-      <SEO
-        title="Projects"
-        description="Cristian Bernal Latest Projects: Sk-shop, N4tours, Covid-19-tracker, Venues Finder, Easy-find, Voluntarios-Taize"
-      />
+      <SEO title="Projects" description="Cristian Bernal's Portfolio" />
       <main className="project-page">
-        <Projects projects={projects} title="All Projects" />
+        <Title title="All Projects" />
+        <Projects projects={projects} />
       </main>
     </Layout>
   )

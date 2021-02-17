@@ -1,7 +1,8 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import Blogs from "../components/Blogs"
+import Layout from "../components/Layout"
+import Blogs from "../components/Blog/Blogs"
+//import CategoryMenu from "../components/Blog/CategoryMenu"
 import SEO from "../components/SEO"
 
 const Blog = ({
@@ -13,7 +14,7 @@ const Blog = ({
     <Layout>
       <SEO title="Blog" description="Cristian Bernal Latest articles" />
       <main className="blog-page">
-        <Blogs blogs={blogs} title="Blog" />
+        <Blogs blogs={blogs} title="Blog" horizontal />
       </main>
     </Layout>
   )
@@ -35,7 +36,7 @@ export const query = graphql`
             }
           }
         }
-        category
+        tag
       }
     }
   }

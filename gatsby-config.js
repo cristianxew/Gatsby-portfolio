@@ -74,25 +74,28 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://portafolio-api-strapi.herokuapp.com`,
+        apiURL: "http://localhost:1337",
         queryLimit: 1000, // Default to 100
-        contentTypes: [`projects`, `blogs`],
+        contentTypes: [`projects`, `blogs`, `categories`],
         singleTypes: [`about`],
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Halant`,
-            variants: [`400`, `500`, `600`],
-          },
-          {
-            family: `Nunito Sans`,
-            variants: [`300`, `400`, `500`],
-          },
+          `Inter sans-serif\:400,500,600`,
+          `Fira Sans\:300,400,500`, // you can also specify font weights and styles
         ],
+        display: "swap",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
       },
     },
     {

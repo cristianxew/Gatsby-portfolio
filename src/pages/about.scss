@@ -1,127 +1,73 @@
 .about-page {
   margin-top: 3rem;
+  min-height: 77vh;
+
   .about-section {
-    padding: 4rem 0;
+    padding: 6rem 0 4rem;
   }
 }
 
 .about-info {
   margin: 0 auto;
   padding: 1rem;
+  //text-align: center;
+}
+
+.personal-info-bottoms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.photo-about {
   text-align: center;
-}
-
-.personal-info {
-  ul li {
-    margin-bottom: 1.25rem;
-    p {
-      font-weight: inherit;
-    }
-  }
-  span {
-    color: #a1e4df;
-  }
-}
-
-.foto-container {
-  width: 220px;
+  width: 80%;
+  border-radius: 50%;
   margin: auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  //position: relative;
-  .photo-about {
-    text-align: center;
-    img {
-      border-radius: 10px;
-      height: 100%;
-      object-fit: cover;
+  padding: 1rem;
+  border: 2px solid #00b069;
+
+  @media screen and (max-width: 992px) {
+    max-width: 50%;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    max-width: 70%;
+  }
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.codersrank-wrapper {
+  h2 {
+    font-weight: bold;
+    color: #00b069;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 400px) {
+      font-size: 1.5rem;
+      text-align: center;
     }
   }
 }
 
-.circle {
-  width: 80px;
-  height: 80px;
-  background: #3f3d56;
-  border-radius: 50%;
-  opacity: 0.7;
-  position: absolute;
-  top: 70%;
-  left: 15%;
-  overflow: hidden;
-  animation: circling 18s linear infinite;
-  z-index: 11;
+codersrank-summary {
+  --bg-color: #00293B;
+  --header-bg-color: #003247;
+  --badge-bg-color: #003247;
+  --badge-border-radius: 1rem;
+  --badge-margin: 16px;
+  --badge-box-shadow: 0px 3px 10px RGBA(0, 0, 30, 0.1);
+  --badge-text-color: #ffffff;
+  --badge-rank-font-weight: normal;
 }
 
-@keyframes circling {
-  0% {
-    transform: rotate(0deg) translate(-70px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translate(-70px) rotate(-360deg);
-  }
-}
-
-.circle-2 {
-  width: 55px;
-  height: 55px;
-  background: #007043;
-  border-radius: 50%;
-  opacity: 0.7;
-  position: absolute;
-  bottom: 256px;
-  overflow: hidden;
-  animation: circlereverse 22s linear infinite;
-  z-index: 11;
-}
-
-@keyframes circlereverse {
-  0% {
-    transform: rotate(0deg) translate(-100px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg) translate(-100px) rotate(360deg);
-  }
-}
-
-.floating {
-  width: 50px;
-  height: 50px;
-  background: #a1e4df;
-  border-radius: 50%;
-  opacity: 0.7;
-  position: absolute;
-  top: 45%;
-  right: 40%;
-  z-index: 1;
-  animation: floating 12s linear infinite;
-}
-
-@keyframes floating {
-  0% {
-    transform: translate(0px);
-  }
-  50% {
-    transform: translate(-80px);
-  }
-  100% {
-    transform: translate(0px);
-  }
-}
-
-.square {
-  position: absolute;
-  width: 300px;
-  top: 50%;
-  z-index: -1;
-  right: 10%;
-  animation: rotate 25s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+codersrank-activity {
+  --bg-color-0: rgba(255, 255, 255, 0.7);
 }

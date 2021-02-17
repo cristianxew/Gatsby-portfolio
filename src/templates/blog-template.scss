@@ -85,9 +85,9 @@
   letter-spacing: 0.2px;
   color: #fafafa;
   margin-top: 1rem;
-  font-size: 19px;
+  font-size: 18px;
   @media (max-width: 767px) {
-    font-size: 17px;
+    font-size: 16px;
   }
   h1,
   h2 {
@@ -109,7 +109,7 @@
   p,
   h6 {
     line-height: 32px;
-    font-family: "Nunito Sans", sans-serif;
+    font-family:  "Fira Sans", sans-serif;
     @media (max-width: 767px) {
       line-height: 28px;
     }

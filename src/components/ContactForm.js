@@ -1,5 +1,5 @@
 import React from "react"
-import Bottom from "./Bottom"
+import Bottom from "./Bottom/Bottom"
 
 export default class ContactForm extends React.Component {
   constructor() {

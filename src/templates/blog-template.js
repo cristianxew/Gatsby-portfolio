@@ -2,16 +2,16 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/Layout"
-import Bottom from "../components/Bottom"
+import Bottom from "../components/Bottom/Bottom"
 import SocialLinks from "../constants/socialLinks"
 import SEO from "../components/SEO"
-import Comments from "../components/Comments"
+import Comments from "../components/Blog/Comments"
 import { FaReply } from "react-icons/fa"
 import ReactMarkdown from "react-markdown"
 import "./blog-template.scss"
 
 const ComponentName = ({ data }) => {
-  const { content, image, title, desc, date, category, slug, id } = data.blog
+  const { content, image, title, desc, date, tag, slug, id } = data.blog
   return (
     <Layout>
       <SEO title={title} description={desc} />
@@ -27,7 +27,7 @@ const ComponentName = ({ data }) => {
           />
           <header className="blog-header-top">
             <div className="blog-header-top-left">
-              <h5>#{category}</h5>
+              <h5>#{tag}</h5>
               <span>{date}</span>
             </div>
             <div className="blog-header-top-rigth">
@@ -60,7 +60,7 @@ export const query = graphql`
       title
       desc
       date(formatString: "DD/MM/YYYY")
-      category
+      tag
       slug
       id
       image {

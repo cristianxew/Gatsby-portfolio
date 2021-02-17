@@ -1,10 +1,9 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
-import Bottom from "../components/Bottom"
 import { Link } from "gatsby"
-
+import Image from "gatsby-image"
+import Layout from "../components/Layout"
+import Bottom from "../components/Bottom/Bottom"
 import "./404.scss"
 
 const query = graphql`
