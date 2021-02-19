@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const blogs = result.data.blogs.nodes
   const categories = result.data.categories.nodes
-  console.log(categories)
+  // console.log(categories)
 
   const blogTemplate = require.resolve("./src/templates/blog-template.js")
 

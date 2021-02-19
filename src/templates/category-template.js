@@ -1,8 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blog/Blogs"
+import Title from "../components/Title/Title"
 
 export const query = graphql`
   query Category($slug: String!) {
@@ -41,8 +42,14 @@ const CategoryTemplate = ({
     <Layout>
       <SEO />
       <main className="blog-page">
-        <Blogs blogs={blogs} title={name[0].name} horizontal />
-        {blogs.length === 0 ? <h1>No posts yet here</h1> : ""}
+        {/*   <Title title="Blog" /> */}
+        <div className="container">
+          <div className="row">
+            <h2 className="blog-page-subtitle">{`Category ${name[0].name}`}</h2>
+            <Blogs blogs={blogs} vertical />
+            {blogs.length === 0 ? <h1>No posts yet here</h1> : ""}
+          </div>
+        </div>
       </main>
     </Layout>
   )

@@ -36,10 +36,6 @@ export const query = graphql`
         github
         featured
         id
-        features {
-          feature_name
-          id
-        }
         image {
           childImageSharp {
             fluid {

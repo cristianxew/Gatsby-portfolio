@@ -1,9 +1,11 @@
+@import "../../sass/essentials";
+
 .section-services {
   // background-color: #667F89;
   padding: 3rem 0 2rem;
 
   .services-item {
-    background-color: #003247;
+    background-color: $color-secondary-dark;
     padding: 2rem 1rem;
     margin-top: 30px;
     border-radius: 1rem;
@@ -19,7 +21,7 @@
       line-height: 3rem;
       width: fit-content;
       margin: 0 auto 1rem;
-      color: #00b069;
+      color: $base-color;
       position: relative;
 
       /* &::after,

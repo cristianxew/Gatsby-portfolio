@@ -65,14 +65,18 @@ export default class ContactForm extends React.Component {
           </div>
           <div className="col-sm-12 mt-4 text-left">
             {status === "SUCCESS" ? (
-              <p className="form-success">Thanks! I will talk to you soon.</p>
+              <p className="form-success">
+                Thanks! Your message has been sent successfully.
+              </p>
             ) : (
               <button id="contact-btn">
                 <Bottom>Send Message</Bottom>
               </button>
             )}
             {status === "ERROR" && (
-              <p className="form-error">Ooops! There was an error.</p>
+              <p className="form-error">
+                Ooops! There was an error. Please try again
+              </p>
             )}
           </div>
         </div>

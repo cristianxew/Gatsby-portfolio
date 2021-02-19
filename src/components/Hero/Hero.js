@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 //import TypedText from "./Typed-text"
-import BackgroundWave from "../../assets/waves.svg"
 import SocialLinks from "../../constants/socialLinks"
 import HeroSlider from "./Slider"
 import Bottom from "../Bottom/Bottom"
@@ -24,8 +23,8 @@ const Hero = () => {
               A passionate front-end web developer based in Warsaw that love
               implementing designs that inspire and attract people
             </p>
-            <Link to="/contact/">
-              <Bottom>Hire Me</Bottom>
+            <Link to="/projects/">
+              <Bottom>View Projects</Bottom>
             </Link>
             <SocialLinks styleClass="social-links social-links__hero" />
           </div>
@@ -36,6 +35,7 @@ const Hero = () => {
       </a>
       <div class="custom-shape-divider-bottom-1613594390">
         <svg
+          id="services"
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"

@@ -1,8 +1,10 @@
-.logo-cris{
+@import "../../sass/essentials";
+
+.logo-cris {
   animation: fill-logo 1s ease forwards 2.5s;
 }
 
-.logo-cb{
+.logo-cb {
   stroke-dasharray: 279;
   stroke-dashoffset: 279;
   animation: line-anim 3s ease forwards;
@@ -13,12 +15,14 @@
     stroke-dashoffset: 0;
   }
 }
+
 @keyframes fill-logo {
-  from{
+  from {
     fill: transparent;
   }
-  to{
+
+  to {
     //fill: #00b069;
-    fill: #fff;
+    fill: $color-primary-light;
   }
 }

@@ -20,7 +20,7 @@ const Project = ({
       <div className="project-info">
         <h3>{project_name}</h3>
         <p className="project-desc">{project_desc}</p>
-        <h3>Stack:</h3>
+        <h3>Skills:</h3>
         <div className="project-skills">{skills}</div>
         {/* <h3>Features:</h3>
         <div className="project-features">

@@ -1,3 +1,5 @@
+@import "../sass/essentials";
+
 .about-page {
   margin-top: 3rem;
   min-height: 77vh;
@@ -27,7 +29,8 @@
   border-radius: 50%;
   margin: auto;
   padding: 1rem;
-  border: 2px solid #00b069;
+  // border: 2px solid $base-color;
+  background-color: $color-secondary-dark;
 
   @media screen and (max-width: 992px) {
     max-width: 50%;
@@ -47,7 +50,7 @@
 .codersrank-wrapper {
   h2 {
     font-weight: bold;
-    color: #00b069;
+    color: $base-color;
     margin-bottom: 2rem;
 
     @media screen and (max-width: 400px) {
@@ -58,16 +61,16 @@
 }
 
 codersrank-summary {
-  --bg-color: #00293B;
-  --header-bg-color: #003247;
-  --badge-bg-color: #003247;
+  --bg-color: $color-primary-dark;
+  --header-bg-color: #393e46;
+  --badge-bg-color: #393e46;
   --badge-border-radius: 1rem;
   --badge-margin: 16px;
   --badge-box-shadow: 0px 3px 10px RGBA(0, 0, 30, 0.1);
-  --badge-text-color: #ffffff;
+  --badge-text-color: #D4D4D4;
   --badge-rank-font-weight: normal;
 }
 
 codersrank-activity {
-  --bg-color-0: rgba(255, 255, 255, 0.7);
+  --bg-color-0: rgba(255, 255, 255, 0.5);
 }

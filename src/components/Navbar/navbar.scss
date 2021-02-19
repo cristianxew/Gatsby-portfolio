@@ -1,58 +1,70 @@
+@import "../../sass/essentials";
+
 .menu-wrap {
   position: relative;
   transition: all 0.8s ease;
+  // background: $color-secondary-dark;
+
   .main-menu {
     div {
       .uls-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 2rem;
-        transition: all 0.8s ease;
+        transition: all 0.4s ease;
         font-weight: 600;
+
         ul {
           display: flex;
           padding-left: 0;
           margin: 0;
+
           li {
             list-style: none;
             padding: 12px 24px;
+
             a {
               text-transform: capitalize;
               text-decoration: none;
               transition: color 0.4s ease;
-              color: #fff;
+              color: $color-primary-light;
+
               &.active,
               &:hover {
-                color: #00b069;
+                color: $base-color;
               }
             }
           }
         }
+
         .social-box-menu {
           display: none;
         }
       }
     }
   }
+
   .toggler {
     position: absolute;
     right: -100vw;
     display: none;
   }
+
   .hamburger {
     display: none;
+
     /* Hamburger Line */
-    & > div {
+    &>div {
       position: relative;
       flex: none;
       width: 100%;
       height: 2px;
-      background: #fff;
+      background: $color-primary-light;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.4s ease;
+
       /* Hamburger Lines - Top & Bottom */
       &::before,
       &::after {
@@ -62,20 +74,24 @@
         top: -10px;
         width: 100%;
         height: 2px;
-        background: #fff;
+        background: $color-primary-light;
       }
+
       /* Moves Line Down */
       &::after {
         top: 10px;
       }
     }
   }
+
   #logo-sm {
     display: none;
   }
+
   /* Toggler Animation */
-  .toggler:checked + .hamburger > div {
+  .toggler:checked+.hamburger>div {
     transform: rotate(135deg);
+
     /* Turns Lines Into X */
     &::before,
     &::after {
@@ -83,17 +99,21 @@
       transform: rotate(90deg);
     }
   }
+
   /* Rotate On Hover When Checked */
-  .toggler:checked:hover + .hamburger > div {
+  .toggler:checked:hover+.hamburger>div {
     transform: rotate(225deg);
   }
+
   /* Show Menu */
-  .toggler:checked ~ .main-menu {
+  .toggler:checked~.main-menu {
     visibility: visible;
-    & > div {
+
+    &>div {
       transform: scale(1);
       transition-duration: 0.75s;
-      & > div {
+
+      &>div {
         opacity: 1;
         transition: opacity 0.4s ease 0.4s;
       }
@@ -104,11 +124,13 @@
 @media (max-width: 767px) {
   .logo-sm-container {
     padding: 0.5rem 1.5rem;
+
     #logo-sm {
       display: block;
       margin: 9px;
     }
   }
+
   .menu-wrap .hamburger {
     position: absolute;
     top: 4px;
@@ -122,6 +144,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .menu-wrap .toggler {
     display: block;
     position: absolute;
@@ -133,6 +156,7 @@
     height: 50px;
     opacity: 0;
   }
+
   .menu-wrap .main-menu {
     position: fixed;
     top: 0;
@@ -145,8 +169,9 @@
     align-items: center;
     justify-content: center;
   }
-  .menu-wrap .main-menu > div {
-    background: #00293b;
+
+  .menu-wrap .main-menu>div {
+    background: $color-primary-dark;
     width: 200vw;
     height: 200vw;
     transform: scale(0);
@@ -157,7 +182,7 @@
     justify-content: center;
   }
 
-  .menu-wrap .main-menu > div > .uls-container {
+  .menu-wrap .main-menu>div>.uls-container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -165,39 +190,45 @@
     max-height: 100vh;
     opacity: 0;
     transition: opacity 0.4s ease;
+
     ul:not(:last-child) {
       display: flex;
       flex-direction: column;
     }
+
     .social-box-menu {
       position: initial;
       display: flex;
       flex-direction: row;
+
       li a {
         font-size: 1.8rem;
+
         &:hover {
-          color: #00b069;
+          color: $base-color;
         }
       }
     }
   }
 
-  .menu-wrap .main-menu > div > .uls-container > ul > li {
+  .menu-wrap .main-menu>div>.uls-container>ul>li {
     list-style: none;
-    color: #fff;
+    color: $color-primary-light;
     font-size: 1.5rem;
     padding: 1rem;
+
     a {
       padding: 0;
     }
   }
 
-  .menu-wrap .main-menu > div > .uls-container > ul > li > a {
+  .menu-wrap .main-menu>div>.uls-container>ul>li>a {
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
   }
 }
+
 .nav-container {
   position: fixed;
   top: 0;
@@ -206,11 +237,12 @@
   z-index: 1024;
   transition: all 0.3s ease;
   background: transparent;
+
   .menu-wrap {
     .main-menu {
       div {
         .uls-container {
-          padding: 0 3rem;
+          padding: 1rem 3rem;
         }
       }
     }
@@ -218,9 +250,17 @@
 }
 
 .sticky {
-  background: #00293b;
+  background: $color-secondary-dark;
+
   .menu-wrap {
-    //box-shadow: 0px 3px 10px RGBA(0, 0, 30, 0.1);
-    box-shadow: 0 2px 3px 0 rgba(52, 255, 173, 0.2);
+    box-shadow: 0 1px 10px 0 rgba($color: $color-primary-dark, $alpha: 0.5);
+
+    .main-menu {
+      div {
+        .uls-container {
+          padding: 0 3rem;
+        }
+      }
+    }
   }
 }

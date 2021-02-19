@@ -14,8 +14,7 @@ const ProjectsPage = ({
     <Layout>
       <SEO title="Projects" description="Cristian Bernal's Portfolio" />
       <main className="project-page">
-        <Title title="All Projects" />
-        <Projects projects={projects} />
+        <Projects title="All Projects" projects={projects} />
       </main>
     </Layout>
   )
@@ -33,10 +32,6 @@ export const query = graphql`
         github
         featured
         id
-        features {
-          feature_name
-          id
-        }
         image {
           childImageSharp {
             fluid {

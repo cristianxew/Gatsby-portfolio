@@ -1,5 +1,7 @@
+@import "../../sass/essentials";
+
 .project-page {
-  padding: 3rem 0 0;
+  padding: 5rem 0 0;
   //background-color: #002f43;
   margin-bottom: -3rem;
 }
@@ -9,36 +11,7 @@
 }
 
 .projects {
-  padding: 2rem 0;
-
-  &__title {
-    position: relative;
-    // background-color: #00b069;
-    background-color: #16c79a;
-    height: 40vh;
-    margin-bottom: -10rem;
-
-    .custom-shape-divider-top-1613594118 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      transform: rotate(180deg);
-    }
-
-    .custom-shape-divider-top-1613594118 svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 80px;
-    }
-
-    .custom-shape-divider-top-1613594118 .shape-fill {
-      fill: #00293b;
-    }
-  }
+  padding: 3rem 0;
 
   .row {
     margin-bottom: 4rem;
@@ -47,9 +20,9 @@
       display: flex;
       flex-direction: column;
       // background: #003247;
-      background: #003247;
+      background: $color-secondary-dark;
       box-shadow: 0 -10px 15px 10px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
+      padding: 0.7rem;
       border-radius: 1rem;
       position: relative;
       transition: all 0.5s ease;
@@ -60,7 +33,7 @@
         width: 100%;
         border-radius: 0.5rem;
         z-index: 1;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         filter: brightness(0.9);
 
 
@@ -70,7 +43,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: RGBA(0, 50, 71, 0.9);
+        background-color: rgba($color: $color-primary-dark, $alpha: 0.8);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -85,10 +58,13 @@
         transition: all 0.5s ease;
 
         h3 {
-          font-weight: 700;
+          color: $base-color;
+          font-weight: 600;
           margin-bottom: 0.5rem;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
+
+
 
         //color: #fafafa;
         .project-skills {
@@ -97,13 +73,13 @@
 
         .project-links {
           .project-icon {
-            color: #00b069;
+            color: $accent-color;
             font-size: 1.7rem;
             margin-right: 1rem;
             transition: all 0.3s ease;
 
             &:hover {
-              color: #fafafa;
+              color: $color-primary-light;
 
             }
           }

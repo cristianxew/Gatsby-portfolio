@@ -9,24 +9,7 @@ import Project from "../Project/Project"
 const Projects = ({ projects, title, showLink }) => {
   return (
     <section className="section projects">
-      {title && (
-        <div className="projects__title">
-          <div class="custom-shape-divider-top-1613594118">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z"
-                class="shape-fill"
-              ></path>
-            </svg>
-          </div>
-          <Title styles="title-content__inverted" title={title} />
-        </div>
-      )}
+      <Title title={title} />
       <div className="container">
         <div className="row">
           {projects.map(project => {

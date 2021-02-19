@@ -1,49 +1,23 @@
+@import "../../sass/essentials";
+
 .pill-button {
   display: inline-block;
   transition: all 0.4s ease;
   border-radius: 9999px;
-  background-color: #b02b12;
-  color: #fafafa;
+  background-color: $accent-color;
+  color: $color-primary-light;
   text-decoration: none;
-  padding: 14px 2.5rem;
-  font-size: 16px;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.15rem;
   backface-visibility: hidden;
 
-  @media screen and (max-width: 450px) {
+  /* @media screen and (max-width: 450px) {
     padding: 10px 1.5rem;
-  }
-
-  /* &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    border-radius: 9999px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:#00b069;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
   } */
   &:hover {
     //color:  #b02b12;
-    background-color: #00b069;
+    background-color: $color-primary-light;
+    color: $color-primary-dark;
   }
 
-
-  /* &:hover::before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  } */
 }

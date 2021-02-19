@@ -14,7 +14,7 @@ export default [
     id: 2,
     icon: <CgFeed />,
     title: "Headless cms",
-    text: `Implementation of headless cms solutions with modern web technologies in the frontend like react gatsby or next js.`,
+    text: `Implementation of headless cms with modern web technologies in the frontend like react gatsby or next js.`,
   },
   {
     id: 3,

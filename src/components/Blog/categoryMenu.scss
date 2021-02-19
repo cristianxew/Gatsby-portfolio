@@ -1,3 +1,58 @@
-.blog-sidebar{
-    height: auto;
+@import "../../sass/essentials";
+
+.side-bar-wrapper {
+    padding: 1rem 3rem;
+
+    h2 {
+        margin: 2rem 0;
+    }
+
+    .blog-sidebar {
+        height: auto;
+        padding-left: 0;
+
+        li {
+            text-transform: capitalize;
+            // margin-bottom: 0.5rem;
+            margin: 1rem 0.5rem;
+
+            a {
+                color: $color-primary-light;
+
+
+                div {
+                    font-size: 1.6rem;
+                    background-color: $color-secondary-dark;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    align-items: center;
+
+
+                    .icon {
+                        display: flex;
+                        align-items: center;
+                        background-color: $font-color;
+                        padding: 0.6rem;
+                        border-radius: 0;
+                        border-top-left-radius: 0.5rem;
+                        border-bottom-left-radius: 0.5rem;
+                        transition: background 0.3s ease;
+                    }
+
+                    span {
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        margin-left: 2rem;
+                    }
+                }
+
+                &:hover {
+                    div .icon {
+                        background-color: $base-color;
+                    }
+                }
+
+            }
+        }
+    }
 }

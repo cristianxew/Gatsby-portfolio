@@ -1,9 +1,13 @@
+@import "../sass/essentials";
+
 #contact-btn {
   border: none;
   background-color: transparent;
 }
+
 .contact {
   margin: 7rem 0 3rem;
+
   .form-item {
     .form-control {
       background: transparent;
@@ -15,45 +19,54 @@
       transition: border 0.9s ease;
       padding: 1rem;
       border: none;
-      color: #a1e4df;
+      color: $font-color;
       box-shadow: 0px 3px 10px RGBA(0, 0, 30, 0.1);
     }
+
     .form-group {
-      background-color: #002e42;
+      background-color: $color-secondary-dark;
       border-radius: 10px;
     }
   }
+
   &-form textarea {
     min-height: 175px;
     resize: none;
   }
 }
+
 .contact-sub-container {
   margin: 2rem 0;
+
   .contact-info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    color: #a1e4df;
-    p {
+    color: $font-color;
+
+    /* p {
       font-size: 1.2rem;
-    }
+    } */
+
     .info-group {
       position: relative;
+
       .icon-contact {
         position: absolute;
         left: 0;
         top: 1.2rem;
         font-size: 1.8rem;
       }
+
       .info {
         a {
           text-decoration: none;
           color: inherit;
         }
+
         h5 {
-          color: #fafafa;
+          color: $color-primary-light;
         }
       }
     }
@@ -61,18 +74,18 @@
 }
 
 .form-success {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  background-color: #002e42;
+  background-color: $color-secondary-dark;
   padding: 1rem;
   border-radius: 5px;
-  color: #a1e4df;
+  color: $base-color;
 }
 
 .form-error {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  background-color: #002e42;
+  background-color: $color-secondary-dark;
   padding: 1rem;
   border-radius: 5px;
   color: red;

@@ -2,7 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Blogs from "../components/Blog/Blogs"
-//import CategoryMenu from "../components/Blog/CategoryMenu"
+import Title from "../components/Title/Title"
+import BackgroundShape from "../components/BackgroundShape/BackgroundShape"
+import CategoryMenu from "../components/Blog/CategoryMenu"
 import SEO from "../components/SEO"
 
 const Blog = ({
@@ -14,7 +16,19 @@ const Blog = ({
     <Layout>
       <SEO title="Blog" description="Cristian Bernal Latest articles" />
       <main className="blog-page">
-        <Blogs blogs={blogs} title="Blog" horizontal />
+        {/*  <BackgroundShape /> */}
+        <div className="container">
+          {/*   <Title title="Blog" /> */}
+          <div className="row">
+            <Blogs
+              subtitle="Recently Published"
+              showSideBar
+              blogs={blogs}
+              horizontal
+            />
+            <CategoryMenu />
+          </div>
+        </div>
       </main>
     </Layout>
   )
@@ -31,7 +45,7 @@ export const query = graphql`
         title
         image {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
             }
           }
