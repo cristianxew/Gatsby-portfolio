@@ -1,5 +1,20 @@
 //const path = require("path")
 
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /codersrank/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
+
 // // create pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
