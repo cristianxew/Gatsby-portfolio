@@ -8,13 +8,13 @@ import Title from "../components/Title/Title"
 import Bottom from "../components/Bottom/Bottom"
 import SEO from "../components/SEO"
 import "./about.scss"
-import CodersrankSummary from "@codersrank/summary"
-import CodersRankActivity from "@codersrank/activity"
+/* import CodersrankSummary from "@codersrank/summary"
+import CodersRankActivity from "@codersrank/activity" */
 //window.customElements.define("codersrank-summary", CodersrankSummary)
 
-if (window !== undefined) {
+/* if (window !== undefined) {
   window.customElements.define("codersrank-activity", CodersRankActivity)
-}
+} */
 
 const About = ({
   data: {
@@ -62,7 +62,7 @@ const About = ({
                   </div>
                 </div>
               </div>
-              <div className="col-md-12 mt-5 codersrank-wrapper">
+              {/* <div className="col-md-12 mt-5 codersrank-wrapper">
                 <h2>Codersrank</h2>
                 <codersrank-summary
                   show-avatar="false"
@@ -78,7 +78,7 @@ const About = ({
                   tooltip
                   weeks="46"
                 ></codersrank-activity>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
