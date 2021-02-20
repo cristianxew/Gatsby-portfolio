@@ -11,7 +11,10 @@ import "./about.scss"
 import CodersrankSummary from "@codersrank/summary"
 import CodersRankActivity from "@codersrank/activity"
 //window.customElements.define("codersrank-summary", CodersrankSummary)
-window.customElements.define("codersrank-activity", CodersRankActivity)
+
+if (window !== undefined) {
+  window.customElements.define("codersrank-activity", CodersRankActivity)
+}
 
 const About = ({
   data: {
