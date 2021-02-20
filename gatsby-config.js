@@ -74,7 +74,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: "https://portafolio-api-strapi.herokuapp.com/",
+        apiURL: "https://portafolio-api-strapi.herokuapp.com",
         queryLimit: 1000, // Default to 100
         contentTypes: [`projects`, `blogs`, `categories`],
         singleTypes: [`about`],
