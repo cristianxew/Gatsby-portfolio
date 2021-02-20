@@ -23,6 +23,10 @@ const SEO = ({ title, description }) => {
       <meta name="description" content={description || siteDesc} />
       <meta name="image" content={image} />
       <meta
+        name="myblogu-verification"
+        content="NzJlMDkyMGMzMmRmOWZmN2FlMDVmZWRmN2IyZjJlMTA="
+      />
+      <meta
         name="keywords"
         content="Full-stact web developer, web designer, front-end developer, React developer"
       />
