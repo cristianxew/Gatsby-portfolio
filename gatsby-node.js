@@ -1,6 +1,5 @@
-//const path = require("path")
-
 // // create pages dynamically
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
@@ -16,6 +15,12 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      allStrapiProjectCategories {
+        nodes {
+          strapiId
+          slug
+        }
+      }
     }
   `)
 
@@ -25,29 +30,40 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const blogs = result.data.blogs.nodes
   const categories = result.data.categories.nodes
-  // console.log(categories)
+  const projectCategories = result.data.allStrapiProjectCategories.nodes
 
   const blogTemplate = require.resolve("./src/templates/blog-template.js")
+  const categoryTemplate = require.resolve("./src/templates/blog-category.js")
+  const projectCategoryTemplate = require.resolve(
+    "./src/templates/project-category.js"
+  )
 
   blogs.forEach(blog => {
     createPage({
-      path: `/blogs/${blog.slug}`,
+      path: `/blog/${blog.slug}`,
       component: blogTemplate,
       context: {
         slug: blog.slug,
       },
     })
   })
-  const categoryTemplate = require.resolve(
-    "./src/templates/category-template.js"
-  )
 
   categories.forEach(category => {
     createPage({
-      path: `/category/${category.slug}`,
+      path: `/blog/category/${category.slug}`,
       component: categoryTemplate,
       context: {
         slug: category.slug,
+      },
+    })
+  })
+
+  projectCategories.forEach(projectCategory => {
+    createPage({
+      path: `/projects/${projectCategory.slug}`,
+      component: projectCategoryTemplate,
+      context: {
+        slug: projectCategory.slug,
       },
     })
   })

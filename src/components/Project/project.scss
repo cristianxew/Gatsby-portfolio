@@ -1,8 +1,9 @@
 @import "../../sass/essentials";
 
-.project-page {
-  padding: 5rem 0 0;
-  //background-color: #002f43;
+.project-page,
+.project-category-page {
+  padding: 7rem 0 0;
+  min-height: 100vh;
   margin-bottom: -3rem;
 }
 
@@ -11,7 +12,7 @@
 }
 
 .projects {
-  padding: 3rem 0;
+  padding: 2rem 0 3rem;
 
   .row {
     margin-bottom: 4rem;

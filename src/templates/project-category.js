@@ -1,20 +1,19 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Title from "../components/Title/Title"
-import ProjectCategoriesMenu from "../components/Project/categoryMenu"
-import Layout from "../components/Layout"
 import Projects from "../components/Project/Projects"
+import ProjectCategoriesMenu from "../components/Project/categoryMenu"
+import Title from "../components/Title/Title"
+import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-const ProjectsPage = ({
+const ProjectCategory = ({
   data: {
-    allStrapiProjects: { nodes: projects },
+    projects: { nodes: projects },
   },
 }) => {
   return (
     <Layout>
-      <SEO title="Projects" description="Cristian Bernal's Portfolio" />
-      <main className="project-page">
+      <SEO />
+      <main className="project-category-page">
         <Title title="Portfolio" />
         <ProjectCategoriesMenu />
         <Projects projects={projects} />
@@ -24,8 +23,10 @@ const ProjectsPage = ({
 }
 
 export const query = graphql`
-  {
-    allStrapiProjects(sort: { fields: featured, order: DESC }) {
+  query ProjectCategories($slug: String!) {
+    projects: allStrapiProjects(
+      filter: { project_category: { slug: { eq: $slug } } }
+    ) {
       nodes {
         website
         strapiId
@@ -47,4 +48,4 @@ export const query = graphql`
   }
 `
 
-export default ProjectsPage
+export default ProjectCategory

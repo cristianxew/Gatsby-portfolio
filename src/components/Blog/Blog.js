@@ -6,7 +6,7 @@ import "./blog.scss"
 const Blog = ({ id, title, image, date, slug, desc, tag, vertical }) => {
   return (
     <Link
-      to={`/blogs/${slug}`}
+      to={`/blog/${slug}`}
       key={id}
       className={`${vertical ? "blog-vertical" : "blog-horizontal"}`}
     >

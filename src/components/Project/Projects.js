@@ -9,7 +9,7 @@ import Project from "../Project/Project"
 const Projects = ({ projects, title, showLink }) => {
   return (
     <section className="section projects">
-      <Title title={title} />
+      {title && <Title title={title} />}
       <div className="container">
         <div className="row">
           {projects.map(project => {

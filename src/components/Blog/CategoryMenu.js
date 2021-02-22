@@ -21,7 +21,7 @@ const CategoryMenu = () => (
         <ul className="blog-sidebar">
           {data.allStrapiCategories.nodes.map((category, i) => (
             <li key={i}>
-              <Link to={`/category/${category.slug}`}>
+              <Link to={`/blog/category/${category.slug}`}>
                 <div>
                   <div className="icon">
                     <FaArrowAltCircleRight />

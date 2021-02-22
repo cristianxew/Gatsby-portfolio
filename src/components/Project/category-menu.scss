@@ -1,0 +1,42 @@
+@import "../../sass/essentials";
+
+.projects-categories-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 0;
+
+    &__item {
+        background-color: $color-secondary-dark;
+        margin-right: 2rem;
+        padding: 0.7rem 1.5rem;
+        border-radius: 9999px;
+        transition: all 0.3s ease;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &.active {
+            background-color: $base-color;
+
+            li {
+                color: $color-primary-light;
+            }
+        }
+
+        li {
+            transition: all 0.3s ease;
+            text-transform: capitalize;
+            color: $font-color;
+        }
+    }
+}
+
+.projects-categories-list__item .active {
+    .projects-categories-list__item {
+        background-color: $base-color;
+
+    }
+}
