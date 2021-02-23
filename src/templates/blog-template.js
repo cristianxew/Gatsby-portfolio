@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Image from "gatsby-image"
-import Layout from "../components/Layout"
 import Bottom from "../components/Bottom/Bottom"
 import SocialLinks from "../constants/socialLinks"
 import SEO from "../components/SEO"
@@ -13,7 +12,7 @@ import "./blog-template.scss"
 const ComponentName = ({ data }) => {
   const { content, image, title, desc, date, tag, slug, id } = data.blog
   return (
-    <Layout>
+    <>
       <SEO title={title} description={desc} />
       <section className="blog-template">
         <div className="container blog-content-container">
@@ -49,7 +48,7 @@ const ComponentName = ({ data }) => {
           </div>
         </Link>
       </section>
-    </Layout>
+    </>
   )
 }
 

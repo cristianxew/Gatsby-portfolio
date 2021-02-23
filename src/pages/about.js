@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
-import Layout from "../components/Layout"
 import Title from "../components/Title/Title"
 //import SvgAbout from "../components/About/SvgAbout"
 import Bottom from "../components/Bottom/Bottom"
@@ -28,7 +27,7 @@ const About = ({
   }, [])
 
   return (
-    <Layout>
+    <>
       <SEO
         title="about"
         description="I specialize in building modern web applications with high-quality features. I'm very passionate about programming and I am constantly practicing and improving my skills. Apart from coding my favorite things to do are playing guitar, traveling, and kayaking."
@@ -83,7 +82,7 @@ const About = ({
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   )
 }
 

@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blog/Blogs"
 // import Title from "../components/Title/Title"
@@ -12,7 +11,7 @@ const CategoryTemplate = ({
   },
 }) => {
   return (
-    <Layout>
+    <>
       <SEO />
       <main className="blog-page">
         {/*   <Title title="Blog" /> */}
@@ -24,7 +23,7 @@ const CategoryTemplate = ({
           </div>
         </div>
       </main>
-    </Layout>
+    </>
   )
 }
 

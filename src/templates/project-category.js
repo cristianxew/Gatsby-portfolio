@@ -2,7 +2,6 @@ import React from "react"
 import Projects from "../components/Project/Projects"
 import ProjectCategoriesMenu from "../components/Project/categoryMenu"
 import Title from "../components/Title/Title"
-import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 const ProjectCategory = ({
@@ -11,14 +10,14 @@ const ProjectCategory = ({
   },
 }) => {
   return (
-    <Layout>
+    <>
       <SEO />
       <main className="project-category-page">
         <Title title="Portfolio" />
         <ProjectCategoriesMenu />
         <Projects projects={projects} />
       </main>
-    </Layout>
+    </>
   )
 }
 

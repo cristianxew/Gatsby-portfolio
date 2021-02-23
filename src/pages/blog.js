@@ -1,9 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
 import Blogs from "../components/Blog/Blogs"
-import Title from "../components/Title/Title"
-import BackgroundShape from "../components/BackgroundShape/BackgroundShape"
+// import Title from "../components/Title/Title"
+// import BackgroundShape from "../components/BackgroundShape/BackgroundShape"
 import CategoryMenu from "../components/Blog/CategoryMenu"
 import SEO from "../components/SEO"
 
@@ -13,7 +12,7 @@ const Blog = ({
   },
 }) => {
   return (
-    <Layout>
+    <>
       <SEO title="Blog" description="Cristian Bernal Latest articles" />
       <main className="blog-page">
         {/*  <BackgroundShape /> */}
@@ -30,7 +29,7 @@ const Blog = ({
           </div>
         </div>
       </main>
-    </Layout>
+    </>
   )
 }
 

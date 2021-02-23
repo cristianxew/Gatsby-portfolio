@@ -1,7 +1,6 @@
 import React from "react"
 import { FaPhoneAlt } from "react-icons/fa"
 import { SiMinutemailer } from "react-icons/si"
-import Layout from "../components/Layout"
 import Title from "../components/Title/Title"
 import ContactForm from "../components/ContactForm"
 import SEO from "../components/SEO"
@@ -9,7 +8,7 @@ import "./contact.scss"
 
 const contact = () => {
   return (
-    <Layout>
+    <>
       <SEO
         title="Contact"
         description="Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or job opportunities"
@@ -60,7 +59,7 @@ const contact = () => {
           </div>
         </div>
       </main>
-    </Layout>
+    </>
   )
 }
 
