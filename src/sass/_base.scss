@@ -9,21 +9,12 @@ body {
     font-family: $main-font;
     font-weight: 400;
     margin: 0;
-    // background-color: #00293b !important;
     background-color: $color-primary-dark;
     color: $font-color;
-    //background-image: url("/img/pattern.jpg");
-    //background-size: contain;
-    //background-repeat: repeat;
 }
 
 .full-screen {
     height: 100vh;
-}
-
-section {
-    overflow: hidden;
-    padding: 4rem 0;
 }
 
 h1,
@@ -56,56 +47,9 @@ button {
     outline: none !important;
 }
 
-.button-border {
-    box-shadow: 3px 3px 8px 0px rgba(145, 145, 145, 0.1);
-    display: inline-block;
-}
-
 .base-color {
-    // color: #00b069 !important;
     color: $base-color;
 }
-
-.noborder {
-    border: none;
-}
-
-.title-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 1rem;
-}
-
-.title-content {
-    h2 {
-        position: relative;
-        display: inline-block;
-        font-size: 2.5rem;
-        font-weight: 900;
-        text-transform: capitalize;
-        color: $base-color;
-    }
-
-    .underline {
-        width: 40px;
-        height: 3px;
-        margin-bottom: 1.25rem;
-        background: $color-primary-light;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    &__inverted {
-        padding-top: 2rem;
-
-        h2 {
-            color: $color-primary-light;
-        }
-    }
-}
-
 
 .btn-center {
     text-align: center;
@@ -113,9 +57,4 @@ button {
     .btn-icon {
         margin-left: 0.5rem;
     }
-}
-
-.btn-icon-left {
-    margin-left: 0;
-    margin-right: 0.5rem;
 }
