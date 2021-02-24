@@ -23,7 +23,7 @@ const Project = ({
         <div className="project-skills">{skills}</div>
         <div className="project-links">
           <a rel="noopener noreferrer" target="_blank" href={website}>
-            Visit website
+            Live demo
           </a>
           <a rel="noopener noreferrer" target="_blank" href={github}>
             Github
