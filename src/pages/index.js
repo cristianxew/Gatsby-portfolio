@@ -26,7 +26,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiProjects(filter: { featured: { eq: true } }) {
+    allStrapiProjects(filter: { featured: { eq: true } }, limit: 4) {
       nodes {
         website
         strapiId
@@ -49,7 +49,7 @@ export const query = graphql`
       nodes {
         slug
         desc
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "DD/MM/YYYY")
         id
         title
         tag

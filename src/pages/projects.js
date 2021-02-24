@@ -14,9 +14,9 @@ const ProjectsPage = ({
     <>
       <SEO title="Projects" description="Cristian Bernal's Portfolio" />
       <main className="project-page">
-        <Title title="Portfolio" />
+        <Title title="Projects" />
         <ProjectCategoriesMenu />
-        <Projects projects={projects} />
+        <Projects showPagination projects={projects} />
       </main>
     </>
   )

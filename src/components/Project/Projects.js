@@ -1,24 +1,69 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import Pagination from "react-js-pagination"
 import { Link } from "gatsby"
 import { FaShare } from "react-icons/fa"
-
 import Title from "../Title/Title"
 import Bottom from "../Bottom/Bottom"
 import Project from "../Project/Project"
 
-const Projects = ({ projects, title, showLink }) => {
+const Projects = ({ projects, title, showLink, showPagination }) => {
+  const [activePage, setActivePage] = useState(1)
+  const [currentProjects, setCurrentProjects] = useState(null)
+  const projectsPerPage = 4
+  const pageRange = 5
+
+  useEffect(() => {
+    setProjectsToBeDisplayed(activePage * projectsPerPage)
+  }, [activePage, projects.length])
+
+  /* useEffect(() => {
+    setProjectsToBeDisplayed(activePage * projectsPerPage)
+  }, [activePage]) */
+
+  const setProjectsToBeDisplayed = lastProjectIndex => {
+    const indexOfLastProject = lastProjectIndex
+    const indexOfFirstProject = indexOfLastProject - projectsPerPage
+
+    const currentProjectsData = projects.slice(
+      indexOfFirstProject,
+      indexOfLastProject
+    )
+    setCurrentProjects(currentProjectsData)
+  }
+
+  const handlePageChange = pageNumber => {
+    setActivePage(pageNumber)
+  }
+  if (null === currentProjects) {
+    return null
+  }
+
   return (
     <section className="section projects">
       {title && <Title title={title} />}
       <div className="container">
         <div className="row">
-          {projects.map(project => {
-            return (
-              <div className="section-center projects-center col-lg-6">
-                <Project key={project.id} {...project} />
-              </div>
-            )
-          })}
+          {showPagination
+            ? currentProjects.map(project => {
+                return (
+                  <div
+                    key={project.id}
+                    className="section-center projects-center col-lg-6"
+                  >
+                    <Project {...project} />
+                  </div>
+                )
+              })
+            : projects.map(project => {
+                return (
+                  <div
+                    key={project.id}
+                    className="section-center projects-center col-lg-6"
+                  >
+                    <Project {...project} />
+                  </div>
+                )
+              })}
         </div>
         {showLink && (
           <Link to="/projects/">
@@ -29,6 +74,21 @@ const Projects = ({ projects, title, showLink }) => {
               </Bottom>
             </div>
           </Link>
+        )}
+        {showPagination && (
+          <div className="pagination-wrapper">
+            <Pagination
+              activePage={activePage}
+              itemsCountPerPage={projectsPerPage}
+              totalItemsCount={projects.length}
+              pageRangeDisplayed={pageRange}
+              onChange={handlePageChange}
+              itemClass={"page-item"}
+              linkClass={"page-link"}
+              prevPageText={"Previous"}
+              nextPageText={"Next"}
+            />
+          </div>
         )}
       </div>
     </section>
