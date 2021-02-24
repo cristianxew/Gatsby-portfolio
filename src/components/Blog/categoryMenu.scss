@@ -1,10 +1,10 @@
 @import "../../sass/essentials";
 
 .side-bar-wrapper {
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
 
     h2 {
-        margin: 2rem 0;
+        margin: 1rem 0 2rem;
     }
 
     .blog-sidebar {
@@ -32,7 +32,7 @@
                         display: flex;
                         align-items: center;
                         background-color: $font-color-secondary;
-                        padding: 0.6rem;
+                        padding: 0.7rem;
                         border-radius: 0;
                         border-top-left-radius: 0.5rem;
                         border-bottom-left-radius: 0.5rem;
