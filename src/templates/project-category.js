@@ -13,9 +13,9 @@ const ProjectCategory = ({
     <>
       <SEO />
       <main className="project-category-page">
-        <Title title="Portfolio" />
+        <Title title="Projects" />
         <ProjectCategoriesMenu />
-        <Projects projects={projects} />
+        <Projects showPagination projects={projects} />
       </main>
     </>
   )
