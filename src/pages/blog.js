@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blog/Blogs"
-// import Title from "../components/Title/Title"
+import Title from "../components/Title/Title"
 // import BackgroundShape from "../components/BackgroundShape/BackgroundShape"
 import CategoryMenu from "../components/Blog/CategoryMenu"
 import SEO from "../components/SEO"
@@ -17,7 +17,7 @@ const Blog = ({
       <main className="blog-page">
         {/*  <BackgroundShape /> */}
         <div className="container">
-          {/*   <Title title="Blog" /> */}
+          <Title title="Blog" />
           <div className="row">
             <Blogs
               subtitle="Recently Published"
@@ -35,7 +35,7 @@ const Blog = ({
 
 export const query = graphql`
   {
-    allStrapiBlogs {
+    allStrapiBlogs(sort: { order: DESC, fields: date }) {
       nodes {
         slug
         desc
