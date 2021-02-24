@@ -1,3 +1,5 @@
+@import "../../sass/essentials";
+
 .section-skills {
   padding: 1rem 1rem 3rem;
 
@@ -6,7 +8,7 @@
       .slick-track {
         div div {
           font-size: 3.5rem;
-          color: #8f97a7;
+          color: $font-color-secondary;
         }
       }
     }
