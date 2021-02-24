@@ -1,13 +1,14 @@
 @import "../../sass/essentials";
 
-.blog-page {
+.blog-page,
+.blog-category-page {
   margin: 7rem 0 0rem;
   min-height: 100vh;
 
   .blog-page-subtitle {
     padding-left: 2rem;
     border-radius: 5px;
-    margin: 2rem 0;
+    margin: 1rem 0 2rem;
     position: relative;
 
     &::after {
@@ -28,14 +29,6 @@
 
 }
 
-
-/* .blogs-section .horizontal{
-  max-width: 70%;
-} */
-
-.blogs-center {
-  margin: 2rem 0;
-}
 
 .blog-horizontal {
   display: block;
@@ -87,11 +80,12 @@
         }
 
         span {
-          color: $base-color;
+          font-size: 0.8rem;
+          font-weight: 500;
           text-transform: capitalize;
-          padding: 0.5rem 0;
-          // background-color: $color-primary-dark;
-          border-radius: 5px;
+          padding: 0.5rem 1rem;
+          background: $font-color-secondary;
+          border-radius: 0.5rem;
         }
       }
     }
@@ -178,12 +172,11 @@
     }
 
     span {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      color: $base-color;
       text-transform: capitalize;
-      //padding: 0.5rem 1rem;
-      //background:#005172;
+      padding: 0.5rem 1rem;
+      background: $font-color-secondary;
       border-radius: 0.5rem;
     }
   }
@@ -242,6 +235,24 @@
   }
 }
 
+.latest-articles {
+  margin: 1rem 0 2rem;
+}
+
+.blog-category-page {
+  .container {
+    .row {
+      .col-md-12 {
+        .blogs-section {
+          .blogs-center {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 767px) {
   /* .blogs-horizontal {
     display: flex;
@@ -254,7 +265,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
     column-gap: 2rem;
-    margin: 2rem 0 0;
+    margin: 2rem 0;
   }
 
   .blog-vertical .blog-img-container .blog-img {

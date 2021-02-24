@@ -2,6 +2,12 @@
 
 .blog-template {
   padding: 5rem 0 3.5rem;
+
+  a .btn-center .pill-button {
+    &:first-child svg {
+      margin-right: 0.6rem;
+    }
+  }
 }
 
 .blog-content-container {
@@ -9,38 +15,30 @@
   position: relative;
 }
 
-.blog-header-photo {
-  position: absolute;
-  top: 3.3rem;
-  max-width: 48px;
-  border-radius: 5px;
-  filter: brightness(0.9);
-}
-
-.blog-header-top {
+.blog-header {
   display: flex;
   justify-content: space-between;
   margin-top: 0rem;
   border-bottom: 2px solid $color-secondary-dark;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 
-  .blog-header-top-left {
+  .blog-header-left {
     display: flex;
-    flex-direction: column;
-    margin-left: 4rem;
-    color: #99a9b1;
+    align-items: center;
+    color: $font-color;
 
     h5 {
+      font-size: 0.8rem;
+      font-weight: 500;
       text-transform: capitalize;
-      color: $base-color;
-    }
-
-    @media (max-width: 380px) {
-      margin-left: 3.5rem;
+      padding: 0.5rem 1rem;
+      background: $font-color-secondary;
+      border-radius: 0.5rem;
+      margin: 0 2rem 0 0;
     }
   }
 
-  .blog-header-top-rigth {
+  .blog-header-rigth {
     display: flex;
     align-items: flex-end;
   }
@@ -84,7 +82,7 @@
     margin: 5px 0;
 
     .social-link {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: $font-color;
       transition: 0.4s ease;
       cursor: pointer;

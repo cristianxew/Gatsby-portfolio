@@ -18,9 +18,9 @@ const Blog = ({ id, title, image, date, slug, desc, tag, vertical }) => {
         </div>
         <div className="blog-card">
           <h3>{title}</h3>
-          <p>{desc} </p>
+          <p>{desc.substring(0, 120)}... </p>
           <div className="blog-footer">
-            <span>#{tag}</span>
+            <span>{tag}</span>
             <p> {date}</p>
           </div>
         </div>

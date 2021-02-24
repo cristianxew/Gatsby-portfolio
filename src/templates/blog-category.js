@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blog/Blogs"
-// import Title from "../components/Title/Title"
+import Title from "../components/Title/Title"
 
 const CategoryTemplate = ({
   data: {
@@ -13,12 +13,15 @@ const CategoryTemplate = ({
   return (
     <>
       <SEO />
-      <main className="blog-page">
-        {/*   <Title title="Blog" /> */}
+      <main className="blog-category-page">
         <div className="container">
+          <Title title="Blog" />
           <div className="row">
-            <h2 className="blog-page-subtitle">{`Category ${name[0].name}`}</h2>
-            <Blogs blogs={blogs} vertical />
+            <Blogs
+              subtitle={`Category ${name[0].name}`}
+              blogs={blogs}
+              vertical
+            />
             {blogs.length === 0 ? <h1>No posts yet here</h1> : ""}
           </div>
         </div>
@@ -29,10 +32,13 @@ const CategoryTemplate = ({
 
 export const query = graphql`
   query Category($slug: String!) {
-    blogs: allStrapiBlogs(filter: { categoria: { slug: { eq: $slug } } }) {
+    blogs: allStrapiBlogs(
+      filter: { categoria: { slug: { eq: $slug } } }
+      sort: { fields: date, order: DESC }
+    ) {
       nodes {
         slug
-        date
+        date(formatString: "DD/MM/YYYY")
         desc
         id
         title

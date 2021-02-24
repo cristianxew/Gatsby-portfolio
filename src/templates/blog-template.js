@@ -20,16 +20,12 @@ const ComponentName = ({ data }) => {
             className="blog-template-top-img"
             fluid={image.childImageSharp.fluid}
           />
-          <Image
-            className="blog-header-photo"
-            fluid={data.photo.nodes[0].image.childImageSharp.fluid}
-          />
-          <header className="blog-header-top">
-            <div className="blog-header-top-left">
+          <header className="blog-header">
+            <div className="blog-header-left">
               <h5>#{tag}</h5>
               <span>{date}</span>
             </div>
-            <div className="blog-header-top-rigth">
+            <div className="blog-header-rigth">
               <SocialLinks styleClass="social-links-blog" />
             </div>
           </header>
@@ -66,17 +62,6 @@ export const query = graphql`
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-    photo: allStrapiAbout {
-      nodes {
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
           }
         }
       }

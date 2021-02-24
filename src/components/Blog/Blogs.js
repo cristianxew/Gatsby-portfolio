@@ -2,11 +2,6 @@ import React, { useState, useEffect } from "react"
 import Title from "../Title/Title"
 import Blog from "./Blog"
 import Pagination from "react-js-pagination"
-// import { Link } from "gatsby"
-// import { FaShare } from "react-icons/fa"
-// import Bottom from "../Bottom/Bottom"
-// import CategoryMenu from "../Blog/CategoryMenu"
-//import Blog02 from "../Blog/Blog02"
 
 export const Blogs = ({
   blogs,
@@ -22,29 +17,14 @@ export const Blogs = ({
   const pageRange = 10
 
   useEffect(() => {
-    /* const activePage = 1
-    setActivePage(activePage) */
-
-    /* eslint-disable */
-    setBlogsToBeDisplayed(
-      activePage * blogsPerPage
-    ) /* eslint-disable no-alert, no-console */
-  }, [blogs.length])
-
-  useEffect(() => {
-    /* eslint-disable */
     setBlogsToBeDisplayed(activePage * blogsPerPage)
-  }, [activePage])
+  }, [activePage, blogs.length])
 
   const setBlogsToBeDisplayed = lastBlogIndex => {
-    const indexOfLastProduct = lastBlogIndex // e.g. 6
-    const indexOfFirstProduct = indexOfLastProduct - blogsPerPage // e.g. 6-6 = 0 ( when product per page is 6 )
+    const indexOfLastBlog = lastBlogIndex
+    const indexOfFirstBlog = indexOfLastBlog - blogsPerPage
 
-    // Get all the products from index of first product, to index of last product
-    const currentBlogsData = blogs.slice(
-      indexOfFirstProduct,
-      indexOfLastProduct
-    ) // e.g. products from index 0 to 6 ( 6 items ).
+    const currentBlogsData = blogs.slice(indexOfFirstBlog, indexOfLastBlog)
     setCurrentBlogs(currentBlogsData)
   }
 
