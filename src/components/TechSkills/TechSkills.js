@@ -26,7 +26,7 @@ import { GrGatsbyjs, GrGraphQl } from "react-icons/gr"
 import "./tech-skills.scss"
 
 export const TechSkills = () => {
-  var settings = {
+  const settings = {
     className: "slider-container",
     accessibility: true,
     dots: false,
