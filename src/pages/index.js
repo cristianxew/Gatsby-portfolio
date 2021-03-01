@@ -5,6 +5,7 @@ import Services from "../components/Service/Services"
 import TechSkills from "../components/TechSkills/TechSkills"
 import Projects from "../components/Project/Projects"
 import LatestArticles from "../components/Blog/LatestArticles"
+import Testimonials from "../components/Testimonials/Testimonials"
 import SEO from "../components/SEO"
 
 export default ({ data }) => {
@@ -18,6 +19,7 @@ export default ({ data }) => {
       <Hero />
       <Services />
       <Projects projects={projects} title="Featured projects" showLink />
+      <Testimonials />
       <LatestArticles blogs={blogs} title="Latest Articles" />
       <TechSkills />
     </>

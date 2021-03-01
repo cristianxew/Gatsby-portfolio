@@ -1,0 +1,84 @@
+@import "../../sass/essentials";
+
+.testimonials {
+    background-color: $color-secondary-dark;
+    padding: 4rem 0 5rem;
+    margin: 2rem 0 4rem;
+
+    .container {
+
+        .slick-slider {
+            max-width: 700px;
+            margin: 0 auto;
+
+            .slick-dots {
+                bottom: -30px;
+
+                li {
+                    button {
+                        &::before {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .slick-active {
+                    button {
+                        &::before {
+                            color: $base-color;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-evenly;
+
+        &__img {
+            max-width: 100px;
+            margin: 0 auto;
+
+            svg g path {
+                fill: $font-color-secondary;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        &__text {
+            width: 100%;
+            margin: 3rem auto;
+            max-width: 700px;
+            text-align: center;
+            font-size: 1.25rem;
+
+            .quote {
+                /*  position: absolute;
+                font-size: 2rem; */
+                color: $color-primary-light;
+            }
+        }
+
+        &__footer {
+            p {
+                margin-bottom: 5px;
+
+                span {
+                    display: block;
+
+                }
+            }
+        }
+    }
+
+}
