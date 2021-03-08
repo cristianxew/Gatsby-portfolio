@@ -42,7 +42,7 @@ module.exports = {
                   description: node.desc,
                   date: node.date,
                   title: node.title,
-                  url: site.siteMetadata.siteUrl + "/blogs/" + node.slug,
+                  url: site.siteMetadata.siteUrl + "/blog/" + node.slug,
                 })
               })
             },
@@ -74,7 +74,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL,
+        apiURL: "https://portafolio-api-strapi.herokuapp.com", //process.env.API_URL,
         queryLimit: 1000, // Default to 100
         contentTypes: [`projects`, `blogs`, `categories`, `project-categories`],
         singleTypes: [`about`],

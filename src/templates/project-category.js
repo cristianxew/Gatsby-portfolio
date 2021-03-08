@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Projects from "../components/Project/Projects"
 import ProjectCategoriesMenu from "../components/Project/categoryMenu"
 import Title from "../components/Title/Title"

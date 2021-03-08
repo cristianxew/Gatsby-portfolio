@@ -3,6 +3,18 @@
 -------------------------*/
 html {
     scroll-behavior: smooth;
+
+    @include mq($until: medium) {
+        font-size: 90%
+    }
+
+    ;
+
+    @include mq($until: small) {
+        font-size: 85%
+    }
+
+    ;
 }
 
 body {

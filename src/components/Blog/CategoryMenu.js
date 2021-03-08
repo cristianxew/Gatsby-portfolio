@@ -17,21 +17,23 @@ const CategoryMenu = () => (
     `}
     render={data => (
       <div className="col-md-4 side-bar-wrapper">
-        <h2>Topics</h2>
-        <ul className="blog-sidebar">
-          {data.allStrapiCategories.nodes.map((category, i) => (
-            <li key={i}>
-              <Link to={`/blog/category/${category.slug}`}>
-                <div>
-                  <div className="icon">
-                    <FaArrowAltCircleRight />
+        <div className="container">
+          <h2>Topics</h2>
+          <ul className="blog-sidebar">
+            {data.allStrapiCategories.nodes.map((category, i) => (
+              <li key={i}>
+                <Link to={`/blog/category/${category.slug}`}>
+                  <div>
+                    <div className="icon">
+                      <FaArrowAltCircleRight />
+                    </div>
+                    <span>{category.name}</span>
                   </div>
-                  <span>{category.name}</span>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     )}
   />

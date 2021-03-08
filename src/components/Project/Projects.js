@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import Pagination from "react-js-pagination"
 import { Link } from "gatsby"
 import { FaShare } from "react-icons/fa"
@@ -16,20 +16,19 @@ const Projects = ({ projects, title, showLink, showPagination }) => {
     setProjectsToBeDisplayed(activePage * projectsPerPage)
   }, [activePage, projects.length])
 
-  /* useEffect(() => {
-    setProjectsToBeDisplayed(activePage * projectsPerPage)
-  }, [activePage]) */
+  const setProjectsToBeDisplayed = useCallback(
+    lastProjectIndex => {
+      const indexOfLastProject = lastProjectIndex
+      const indexOfFirstProject = indexOfLastProject - projectsPerPage
 
-  const setProjectsToBeDisplayed = lastProjectIndex => {
-    const indexOfLastProject = lastProjectIndex
-    const indexOfFirstProject = indexOfLastProject - projectsPerPage
-
-    const currentProjectsData = projects.slice(
-      indexOfFirstProject,
-      indexOfLastProject
-    )
-    setCurrentProjects(currentProjectsData)
-  }
+      const currentProjectsData = projects.slice(
+        indexOfFirstProject,
+        indexOfLastProject
+      )
+      setCurrentProjects(currentProjectsData)
+    },
+    [projects]
+  )
 
   const handlePageChange = pageNumber => {
     setActivePage(pageNumber)

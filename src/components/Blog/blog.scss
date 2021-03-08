@@ -1,5 +1,12 @@
 @import "../../sass/essentials";
 
+.blog-page .container .row {
+  @include mq($until: medium) {
+    flex-direction: column-reverse;
+  }
+}
+
+
 .blog-page,
 .blog-category-page {
   margin: 7rem 0 0rem;
@@ -51,6 +58,10 @@
       color: $color-primary-light;
       padding: 0.5rem 2rem;
 
+      @media screen and (max-width: 991px) and (min-width: 767px) {
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+      }
+
       h3 {
         color: $color-primary-light;
         text-transform: capitalize;
@@ -62,9 +73,12 @@
 
       p {
         color: $font-color;
-        // font-size: 0.9rem;
-        max-height: 75px;
         overflow: hidden;
+
+        @media screen and (max-width: 991px)and (min-width: 767px) {
+          font-size: 0.8rem;
+          ;
+        }
       }
 
       .blog-footer {
@@ -93,6 +107,11 @@
     .blog-img-container {
       height: 245px;
 
+      @media screen and (max-width: 991px) and (min-width: 767px) {
+        height: 220px;
+      }
+
+
       .blog-img {
         padding: 1rem;
         width: 280px;
@@ -100,6 +119,10 @@
         transition: all 0.3s ease;
         filter: brightness(0.9);
         border-radius: 0.5rem;
+
+        @media screen and (max-width: 991px)and (min-width: 767px) {
+          width: 200px;
+        }
       }
     }
   }
@@ -140,12 +163,11 @@
       color: $color-primary-light;
       text-transform: capitalize;
       font-size: 1.3rem;
-      line-height: 1.5rem;
+      line-height: 1.6rem;
       font-weight: 700;
     }
 
     p {
-      font-size: 0.9rem;
       color: $font-color;
     }
   }
@@ -210,6 +232,10 @@
         padding: 0.7rem 1rem;
         transition: all 0.3s ease;
 
+        @include mq($until: small) {
+          padding: 0.5rem 0.7rem;
+        }
+
         &:hover {
           color: $font-color-secondary;
         }
@@ -254,12 +280,6 @@
 }
 
 @media screen and (min-width: 767px) {
-  /* .blogs-horizontal {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    //max-width: 70%;
-  } */
 
   .blogs-center {
     display: grid;

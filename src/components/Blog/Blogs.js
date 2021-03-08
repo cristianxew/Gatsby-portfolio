@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import Title from "../Title/Title"
 import Blog from "./Blog"
 import Pagination from "react-js-pagination"
@@ -20,13 +20,16 @@ export const Blogs = ({
     setBlogsToBeDisplayed(activePage * blogsPerPage)
   }, [activePage, blogs.length])
 
-  const setBlogsToBeDisplayed = lastBlogIndex => {
-    const indexOfLastBlog = lastBlogIndex
-    const indexOfFirstBlog = indexOfLastBlog - blogsPerPage
+  const setBlogsToBeDisplayed = useCallback(
+    lastBlogIndex => {
+      const indexOfLastBlog = lastBlogIndex
+      const indexOfFirstBlog = indexOfLastBlog - blogsPerPage
 
-    const currentBlogsData = blogs.slice(indexOfFirstBlog, indexOfLastBlog)
-    setCurrentBlogs(currentBlogsData)
-  }
+      const currentBlogsData = blogs.slice(indexOfFirstBlog, indexOfLastBlog)
+      setCurrentBlogs(currentBlogsData)
+    },
+    [blogs]
+  )
 
   const handlePageChange = pageNumber => {
     setActivePage(pageNumber)

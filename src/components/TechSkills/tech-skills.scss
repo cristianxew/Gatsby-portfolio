@@ -9,6 +9,10 @@
         div div {
           font-size: 3.5rem;
           color: $font-color-secondary;
+
+          @include mq($until: small) {
+            font-size: 3rem;
+          }
         }
       }
     }

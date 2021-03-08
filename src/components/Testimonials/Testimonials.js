@@ -12,14 +12,14 @@ const query = graphql`
   {
     lars: file(relativePath: { eq: "lars_reisner.jpg" }) {
       childImageSharp {
-        fixed(width: 100, height: 100) {
+        fixed(width: 80, height: 80) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     christoph: file(relativePath: { eq: "christoph.png" }) {
       childImageSharp {
-        fixed(width: 100, height: 100) {
+        fixed(width: 80, height: 80) {
           ...GatsbyImageSharpFixed
         }
       }

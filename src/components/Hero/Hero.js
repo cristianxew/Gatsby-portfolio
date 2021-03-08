@@ -33,7 +33,7 @@ const Hero = () => {
       <a className="scroll-down" href="#services">
         <span></span>
       </a>
-      <div className="custom-shape-divider-bottom-1613768689">
+      <div id="services" className="custom-shape-divider-bottom-1613768689">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

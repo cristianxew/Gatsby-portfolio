@@ -43,19 +43,21 @@ export const TechSkills = () => {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 8,
+          slidesToShow: 10,
         },
       },
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 8,
+          slidesToScroll: 4,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 6,
+          slidesToScroll: 6,
         },
       },
     ],

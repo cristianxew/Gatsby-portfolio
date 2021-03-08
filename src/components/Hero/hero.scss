@@ -26,6 +26,10 @@
 
     h1 {
       font-size: 3rem;
+
+      @include mq($until: small) {
+        font-size: 2.6rem;
+      }
     }
 
     p {
@@ -106,16 +110,6 @@
   }
 }
 
-/* .typed-cursor {
-  font-size: 2.5rem;
-  line-height: 2.7rem;
-}
-
-.typed-text {
-  display: inline-flex;
-  margin: 0.5rem 0 0;
-} */
-
 .social-links {
   display: flex;
   justify-content: space-between;
@@ -155,6 +149,10 @@
   display: block;
   width: calc(135% + 1.3px);
   height: 150px;
+
+  @include mq($until: small) {
+    height: 70px;
+  }
 }
 
 .custom-shape-divider-bottom-1613768689 .shape-fill {

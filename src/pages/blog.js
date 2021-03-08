@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blog/Blogs"
 import Title from "../components/Title/Title"
@@ -11,6 +11,30 @@ const Blog = ({
     allStrapiBlogs: { nodes: blogs },
   },
 }) => {
+  // Change the blog layout base on a media query
+  const [isHorizontal, setIsHorizontal] = useState(null)
+  const [isVertical, setIsVertical] = useState(null)
+  const mediaQuery = window.matchMedia("(min-width: 768px)")
+
+  const handleMediaQuery = e => {
+    if (e.matches) {
+      setIsHorizontal(true)
+      setIsVertical(false)
+    } else {
+      setIsHorizontal(false)
+      setIsVertical(true)
+    }
+  }
+  useEffect(() => {
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleMediaQuery)
+    }
+    handleMediaQuery(mediaQuery)
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQuery)
+    }
+  }, [mediaQuery])
+
   return (
     <>
       <SEO title="Blog" description="Cristian Bernal Latest articles" />
@@ -23,7 +47,8 @@ const Blog = ({
               subtitle="Recently Published"
               showSideBar
               blogs={blogs}
-              horizontal
+              horizontal={isHorizontal}
+              vertical={isVertical}
             />
             <CategoryMenu />
           </div>

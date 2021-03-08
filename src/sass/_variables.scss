@@ -3,6 +3,8 @@ sans-serif;
 $secondary-font: "Inter",
 sans-serif;
 
+
+
 $color-primary-dark: #222831;
 $color-secondary-dark: #393e46;
 $base-color: #00adb5;
@@ -11,7 +13,17 @@ $font-color: #D4D4D4;
 $font-color-secondary:#768091;
 $accent-color: #00B8C2;
 
-$mq-breakpoints: (small: 500px,
-    medium: 660px,
-    large: 960px,
+/* $color-primary-dark: #eeeeee;
+$color-secondary-dark: #D4D4D4;
+$base-color: #00adb5;
+$color-primary-light: #222831;
+$font-color: #393e46;
+$font-color-secondary:#ADADAD;
+$accent-color: #00B8C2; */
+
+
+
+$mq-breakpoints: (small: 576px,
+    medium: 768px,
+    large: 1024px,
     xlarge: 1240px);
