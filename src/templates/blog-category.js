@@ -12,7 +12,7 @@ const CategoryTemplate = ({
 }) => {
   return (
     <>
-      <SEO />
+      <SEO title={` Blog ${name[0].name}`} />
       <main className="blog-category-page">
         <div className="container">
           <Title title="Blog" />
