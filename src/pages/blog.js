@@ -14,7 +14,6 @@ const Blog = ({
   // Change the blog layout base on a media query
   const [isHorizontal, setIsHorizontal] = useState(null)
   const [isVertical, setIsVertical] = useState(null)
-  let mediaQuery
 
   const handleMediaQuery = e => {
     if (e.matches) {
@@ -26,6 +25,7 @@ const Blog = ({
     }
   }
   useEffect(() => {
+    let mediaQuery
     if (typeof window !== `undefined`) {
       mediaQuery = window.matchMedia("(min-width: 768px)")
     }
@@ -36,7 +36,7 @@ const Blog = ({
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQuery)
     }
-  }, [mediaQuery])
+  }, [])
 
   return (
     <>
