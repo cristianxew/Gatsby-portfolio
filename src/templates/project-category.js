@@ -12,7 +12,7 @@ const ProjectCategory = ({
 }) => {
   return (
     <>
-      <SEO />
+      <SEO title="Projects" />
       <main className="project-category-page">
         <Title title="Projects" />
         <ProjectCategoriesMenu />

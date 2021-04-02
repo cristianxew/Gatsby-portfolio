@@ -28,7 +28,7 @@ const SEO = ({ title, description }) => {
       />
       <meta
         name="keywords"
-        content="Full-stact web developer, web designer, front-end developer, React developer"
+        content="Full-stackt web developer, front-end developer, React developer"
       />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
