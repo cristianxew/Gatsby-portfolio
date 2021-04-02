@@ -34,12 +34,13 @@ const LinksData = [
   },
 ]
 
-export default ({ styleClass }) => {
+export default ({ onClick, styleClass }) => {
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
       {LinksData.map(link => (
         <li key={link.id}>
           <Link
+            onClick={onClick}
             partiallyActive={link.isPartiallyActive}
             activeClassName="active"
             to={link.url}

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Logo from "../Logo/Logo"
 import LogoSm from "../Logo/Logo-sm"
 import PageLinks from "../../constants/links"
@@ -7,18 +7,21 @@ import { Link } from "gatsby"
 import "./navbar.scss"
 
 const Navbar = ({ element, sticky }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => setMenuOpen(!menuOpen)
   return (
-    <nav ref={element} className={`nav-container ${sticky ? "sticky" : ""}`}>
+    <nav ref={element} className={`nav-container ${sticky ? "nav-container__sticky" : ""}`}>
       <div className="menu-wrap">
-        <input type="checkbox" className="toggler"></input>
-        <div className="hamburger">
-          <div></div>
-        </div>
         <div className="logo-sm-container">
           <Link to="/">
             <LogoSm />
           </Link>
         </div>
+        <button onClick={toggleMenu}
+          className={`hamburger ${menuOpen ? "hamburger__open" : ""}`}>
+          <div></div>
+        </button>
         <div className="main-menu">
           <div>
             <div className="uls-container">
@@ -29,7 +32,7 @@ const Navbar = ({ element, sticky }) => {
                   </Link>
                 </li>
               </ul>
-              <PageLinks />
+              <PageLinks onClick={toggleMenu} />
               <SocialLinks styleClass="social-box-menu" />
             </div>
           </div>
