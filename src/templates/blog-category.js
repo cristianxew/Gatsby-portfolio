@@ -21,6 +21,7 @@ const CategoryTemplate = ({
               subtitle={`Category ${name[0].name}`}
               blogs={blogs}
               vertical
+              showButton
             />
             {blogs.length === 0 ? <h1>No posts yet here</h1> : ""}
           </div>

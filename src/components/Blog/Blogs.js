@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react"
+import { Link } from "gatsby"
+import { FaReply } from "react-icons/fa"
+import Bottom from "../../components/Bottom/Bottom"
 import Title from "../Title/Title"
 import Blog from "./Blog"
 import Pagination from "react-js-pagination"
@@ -9,6 +12,7 @@ export const Blogs = ({
   horizontal,
   vertical,
   showSideBar,
+  showButton,
   subtitle,
 }) => {
   const [activePage, setActivePage] = useState(1)
@@ -48,6 +52,16 @@ export const Blogs = ({
             return <Blog vertical={vertical} key={blog.id} {...blog} />
           })}
         </div>
+        {showButton && (
+          <Link to="/blog">
+            <div className="btn-center">
+              <Bottom>
+                <FaReply className="btn-icon-left" />
+              Blog
+            </Bottom>
+            </div>
+          </Link>
+        )}
         <div className="pagination-wrapper">
           <Pagination
             activePage={activePage}
