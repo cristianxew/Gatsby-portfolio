@@ -61,16 +61,17 @@
 }
 
 codersrank-summary {
+  --border-radius: 8px;
   --bg-color: $color-primary-dark;
   --header-bg-color: #393e46;
   --badge-bg-color: #393e46;
-  --badge-border-radius: 1rem;
-  --badge-margin: 16px;
+  --badges-padding: 8px 0;
+  --badge-border-radius: 0 0 8px 8px;
   --badge-box-shadow: 0px 3px 10px RGBA(0, 0, 30, 0.1);
   --badge-text-color: #D4D4D4;
   --badge-rank-font-weight: normal;
 }
 
 codersrank-activity {
-  --bg-color-0: rgba(255, 255, 255, 0.5);
+  --bg-color-0: rgb(57, 62, 70);
 }
