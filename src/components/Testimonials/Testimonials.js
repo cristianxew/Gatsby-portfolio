@@ -114,10 +114,7 @@ const Testimonials = () => {
               <Image fixed={christophPhoto} />
             </div>
             <p className="testimonials__item__text">
-              “Cristian has helped in the reception of young pilgrims and has
-              worked with them in community activities such as prayers,
-              workshops and various tasks. He was always very committed to all
-              the responsibilities given to him.”
+              “Cristian was always very committed to all the responsibilities given to him. He has helped in the reception of young pilgrims and has worked with them in community activities such as workshops and various tasks.”
             </p>
             <div className="testimonials__item__footer">
               <h6>Brother Christoph</h6>
