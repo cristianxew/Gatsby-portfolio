@@ -20,14 +20,14 @@ const LinksData = [
     url: "/projects/",
     isPartiallyActive: true,
   },
-  {
+  /* {
     id: 4,
     text: "blog",
     url: "/blog/",
     isPartiallyActive: true,
-  },
+  }, */
   {
-    id: 5,
+    id: 4,
     text: "contact",
     url: "/contact/",
     isPartiallyActive: false,
